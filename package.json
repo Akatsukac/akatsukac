@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "akatsukac",
+  "description": "Christopher Akatsuka's Personal Website",
+  "version": "1.0.0",
+  "author": "Christopher Akatsuka <akatsukac@gmail.com>",
   "dependencies": {
     "gatsby": "^2.3.27",
     "gatsby-image": "^2.0.40",
@@ -24,14 +23,12 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "start": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "lighthouse": "lighthouse https://tadasant.com/ --output-path=./lighthouse/home.html && lighthouse https://tadasant.com/blog --output-path=./lighthouse/blog.html && lighthouse https://tadasant.com/contact --output-path=./lighthouse/contact.html"
   },
   "repository": {
     "type": "git",
