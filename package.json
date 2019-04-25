@@ -4,18 +4,24 @@
   "version": "1.0.0",
   "author": "Christopher Akatsuka <akatsukac@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "core-js": "^2.6.5",
     "gatsby": "^2.3.27",
     "gatsby-image": "^2.0.40",
+    "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-manifest": "^2.0.29",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sharp": "^2.0.35",
+    "gatsby-plugin-typescript": "^2.0.13",
     "gatsby-source-filesystem": "^2.0.31",
     "gatsby-transformer-sharp": "^2.1.18",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "typeface-roboto": "0.0.54",
+    "typescript": "^3.4.5"
   },
   "devDependencies": {
     "prettier": "^1.17.0"
@@ -27,14 +33,11 @@
     "build": "gatsby build",
     "start": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "lighthouse": "lighthouse https://tadasant.com/ --output-path=./lighthouse/home.html && lighthouse https://tadasant.com/blog --output-path=./lighthouse/blog.html && lighthouse https://tadasant.com/contact --output-path=./lighthouse/contact.html"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  "license": "MIT"
 }

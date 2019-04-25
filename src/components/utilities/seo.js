@@ -66,7 +66,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
-        },
+        }
       ]
         .concat(
           keywords.length > 0
@@ -77,6 +77,9 @@ function SEO({ description, lang, meta, keywords, title }) {
             : []
         )
         .concat(meta)}
+        link={[
+          {}
+        ]}
     />
   )
 }
