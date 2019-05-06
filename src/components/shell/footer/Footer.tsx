@@ -5,7 +5,10 @@ import BottomNavigation from '@material-ui/core/BottomNavigation';
 
 const styles = createStyles({
   root: {
-    width: 500,
+    width: '100%',
+    position: 'fixed',
+    bottom: 0,
+    'background-color': '#3f51b5'
   },
 });
 
