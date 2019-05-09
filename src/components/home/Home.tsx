@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { FunctionComponent } from "react";
 
-
-
 const Home: FunctionComponent = () => {
     return (
       <>
-        <div>Aloha</div>
+        <span>
+          Hello, I work!
+        </span>
       </>
     );
 };

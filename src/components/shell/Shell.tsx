@@ -1,15 +1,18 @@
 import * as React from 'react';
 import { FunctionComponent } from "react";
 import Footer from './footer/Footer';
-import Navbar from './header/Header';
+import Header from './header/Header';
+import { BodyContainerDiv } from './Shell.style';
 
-const Shell: FunctionComponent = () => {
+const Shell: FunctionComponent = ({children}) => {
     return (
       <>
-        <Navbar>
-        </Navbar>
-        Hello World
-        <Footer>
+        <Header>
+        </Header>
+        <BodyContainerDiv>
+          {children}
+        </BodyContainerDiv>
+        <Footer>        
         </Footer>
       </>
     );

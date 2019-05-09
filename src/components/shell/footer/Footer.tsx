@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import { createStyles, withStyles, WithStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
+import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 
 const styles = createStyles({
   root: {
@@ -27,6 +28,7 @@ function SimpleBottomNavigation(props: Props) {
       showLabels
       className={classes.root}
     >
+      <BottomNavigationAction label="Recents" icon="" />
     </BottomNavigation>
   );
 }
