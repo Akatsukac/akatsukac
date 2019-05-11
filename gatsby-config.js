@@ -14,10 +14,11 @@ module.exports = {
         path: `${__dirname}/src/assets`,
       },
     },
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-extract-schema`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-favicon`,
     'gatsby-plugin-typescript',
     `gatsby-plugin-styled-components`
-  ],
+  ]
 }

@@ -1,9 +1,18 @@
 import * as React from 'react';
+import { SFC } from 'react';
 import * as PropTypes from 'prop-types';
+import { graphql, Link, StaticQuery } from 'gatsby';
 import { createStyles, withStyles, WithStyles } from '@material-ui/core/styles';
+import { GetHeaderData } from '../../../typings/graphql';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+import { 
+  LogoImg
+} from './Header.style';
+
+interface IQueryProps {
+  data: GetHeaderData.Query
+}
 
 const styles = createStyles({
   root: {
@@ -17,15 +26,20 @@ const styles = createStyles({
 
 export interface Props extends WithStyles<typeof styles> {}
 
-function DenseAppBar(props: Props) {
-  const { classes } = props;
+type TProps = IQueryProps & Props;
+
+function DenseAppBar(props: TProps) {
+  const { data, classes } = props;
+  if (!data || !data.logo || !data.logo.childImageSharp) {
+    console.warn(`DenseAppBar: GraphQL returned a null on build.`);
+  }
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar variant="dense">
-          <Typography variant="h6" color="inherit">
-            Photos
-          </Typography>
+          <Link to='/'>
+            <LogoImg fluid={data.logo.childImageSharp.fluid} alt='akatsukac logo'/>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>
@@ -34,6 +48,25 @@ function DenseAppBar(props: Props) {
 
 DenseAppBar.propTypes = {
   classes: PropTypes.object.isRequired,
-} as any;
+};
 
-export default withStyles(styles)(DenseAppBar);
+const container: SFC<Props> = props => (
+  <StaticQuery
+    query={HEADER_QUERY}
+    render={data => <DenseAppBar data={data} {...props}/>}
+  />
+);
+
+export default withStyles(styles)(container);
+
+const HEADER_QUERY = graphql`
+    query GetHeaderData {
+        logo: file(relativePath: {eq: "images/logo.png"}) {
+            childImageSharp {
+                fluid(maxHeight: 300) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                }
+            }
+        }
+    }
+`;
