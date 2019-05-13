@@ -3,13 +3,14 @@ import * as PropTypes from 'prop-types';
 import { createStyles, withStyles, WithStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import { EmailOutlined } from '@material-ui/icons';
 
 const styles = createStyles({
   root: {
     width: '100%',
     position: 'fixed',
     bottom: 0,
-    'background-color': '#3f51b5'
+    // 'background-color': '#3f51b5'
   },
 });
 
@@ -28,7 +29,7 @@ function SimpleBottomNavigation(props: Props) {
       showLabels
       className={classes.root}
     >
-      <BottomNavigationAction label="Recents" icon="" />
+      <BottomNavigationAction icon={<EmailOutlined />} />
     </BottomNavigation>
   );
 }

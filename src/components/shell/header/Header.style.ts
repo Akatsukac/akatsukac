@@ -1,6 +1,7 @@
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { media } from '../../../styling/core';
+import Toolbar from '@material-ui/core/Toolbar';
 
 export const LogoImg = styled(Img)`
   min-height: 32px;
@@ -12,3 +13,7 @@ export const LogoImg = styled(Img)`
   `}
 `;
 
+export const ToolbarContainer = styled(Toolbar)`
+  display: flex;
+  justify-content: space-between;
+`;
