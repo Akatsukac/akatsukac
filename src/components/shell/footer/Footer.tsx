@@ -1,41 +1,69 @@
 import * as React from 'react';
-import * as PropTypes from 'prop-types';
-import { createStyles, withStyles, WithStyles } from '@material-ui/core/styles';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import { EmailOutlined } from '@material-ui/icons';
+import { FunctionComponent } from "react";
+import { graphql, StaticQuery } from 'gatsby';
+import { GetFooterData } from '../../../typings/graphql';
+import { 
+  LogoImg,
+  FooterContainer
+} from './Footer.style';
 
-const styles = createStyles({
-  root: {
-    width: '100%',
-    position: 'fixed',
-    bottom: 0,
-    // 'background-color': '#3f51b5'
-  },
-});
 
-export interface Props extends WithStyles<typeof styles> {}
+interface IQueryProps {
+  data: GetFooterData.Query
+}
 
-function SimpleBottomNavigation(props: Props) {
-    const { classes } = props;
-  const [value, setValue] = React.useState(0);
-
+function Footer(props: IQueryProps) {
+  const { data } = props;
+  if (!data || !data.email || !data.email.childImageSharp || !data.linkedin || !data.linkedin.childImageSharp 
+    || !data.github || !data.github.childImageSharp) {
+    console.warn(`Footer: GraphQL returned a null on build.`);
+  }
   return (
-    <BottomNavigation
-      value={value}
-      onChange={(event, newValue) => {
-        setValue(newValue);
-      }}
-      showLabels
-      className={classes.root}
-    >
-      <BottomNavigationAction icon={<EmailOutlined />} />
-    </BottomNavigation>
+    <FooterContainer>
+      <a href='mailto:akatsukac@gmail.com' rel="noopener nofollower">
+        <LogoImg fluid={data.email.childImageSharp.fluid} alt='email icon'/>
+      </a>
+      <a href='https://www.linkedin.com/in/akatsukac/' target="__blank" rel="noopener nofollower">
+        <LogoImg fluid={data.linkedin.childImageSharp.fluid} alt='linkedin icon'/>
+      </a>
+      <a href='https://github.com/Akatsukac/akatsukac' target="__blank" rel="noopener nofollower">
+        <LogoImg fluid={data.github.childImageSharp.fluid} alt='github icon'/>
+      </a>
+    </FooterContainer>
   );
 }
 
-SimpleBottomNavigation.propTypes = {
-    classes: PropTypes.object.isRequired,
-} as any;
+const container: FunctionComponent = props => (
+  <StaticQuery
+    query={FOOTER_QUERY}
+    render={data => <Footer data={data} {...props}/>}
+  />
+);
 
-export default withStyles(styles)(SimpleBottomNavigation);
+export default container;
+
+const FOOTER_QUERY = graphql`
+  query GetFooterData {
+    email: file(relativePath: {eq: "images/icons/email_icon.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    linkedin: file(relativePath: {eq: "images/icons/linkedin_icon.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    github: file(relativePath: {eq: "images/icons/github_icon.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 100) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
+`;

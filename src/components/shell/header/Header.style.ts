@@ -13,6 +13,11 @@ export const LogoImg = styled(Img)`
   `}
 `;
 
+export const HeaderContainer = styled.div`
+  position: sticky;
+  top: 0;
+`;
+
 export const ToolbarContainer = styled(Toolbar)`
   display: flex;
   justify-content: space-between;

@@ -6,7 +6,8 @@ import { GetHeaderData } from '../../../typings/graphql';
 import AppBar from '@material-ui/core/AppBar';
 import { 
   LogoImg,
-  ToolbarContainer
+  ToolbarContainer,
+  HeaderContainer
 } from './Header.style';
 
 interface IQueryProps {
@@ -16,10 +17,10 @@ interface IQueryProps {
 function Header(props: IQueryProps) {
   const { data } = props;
   if (!data || !data.logo || !data.logo.childImageSharp) {
-    console.warn(`DenseAppBar: GraphQL returned a null on build.`);
+    console.warn(`Header: GraphQL returned a null on build.`);
   }
   return (
-    <div>
+    <HeaderContainer>
       <AppBar position="static">
         <ToolbarContainer>
           <Link to='/'>
@@ -32,7 +33,7 @@ function Header(props: IQueryProps) {
           </div>
         </ToolbarContainer>
       </AppBar>
-    </div>
+    </HeaderContainer>
   );
 }
 
