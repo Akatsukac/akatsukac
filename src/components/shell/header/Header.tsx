@@ -7,7 +7,6 @@ import AppBar from '@material-ui/core/AppBar';
 import { 
   LogoImg,
   ToolbarContainer,
-  HeaderContainer
 } from './Header.style';
 
 interface IQueryProps {
@@ -20,20 +19,18 @@ function Header(props: IQueryProps) {
     console.warn(`Header: GraphQL returned a null on build.`);
   }
   return (
-    <HeaderContainer>
-      <AppBar position="static">
-        <ToolbarContainer>
-          <Link to='/'>
-            <LogoImg fluid={data.logo.childImageSharp.fluid} alt='akatsukac logo'/>
-          </Link>
-          <div>
-            <Button color="inherit">About Me</Button>
-            <Button color="inherit">Projects</Button>
-            <Button color="inherit">Contact</Button>
-          </div>
-        </ToolbarContainer>
-      </AppBar>
-    </HeaderContainer>
+    <AppBar position="fixed">
+      <ToolbarContainer>
+        <Link to='/'>
+          <LogoImg fluid={data.logo.childImageSharp.fluid} alt='akatsukac logo'/>
+        </Link>
+        <div>
+          <Button color="inherit">About Me</Button>
+          <Button color="inherit">Projects</Button>
+          <Button color="inherit">Contact</Button>
+        </div>
+      </ToolbarContainer>
+    </AppBar>
   );
 }
 
