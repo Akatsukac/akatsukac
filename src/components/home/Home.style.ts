@@ -15,4 +15,13 @@ export const WelcomeContainer = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    color: white;
+
+    h1 {
+        font-size: 75px;
+    }
+
+    h2 {
+        font-size: 45px;
+    }
 `;

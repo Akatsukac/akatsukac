@@ -11,7 +11,7 @@ interface IQueryProps {
   data: GetBackgroundImage.Query
 }
 
-function Header(props: IQueryProps) {
+function Home(props: IQueryProps) {
   const { data } = props;
   if (!data || !data.background || !data.background.childImageSharp) {
     console.warn(`Header: GraphQL returned a null on build.`);
@@ -29,7 +29,7 @@ function Header(props: IQueryProps) {
 const container: FunctionComponent = props => (
   <StaticQuery
     query={HEADER_QUERY}
-    render={data => <Header data={data} {...props}/>}
+    render={data => <Home data={data} {...props}/>}
   />
 );
 
