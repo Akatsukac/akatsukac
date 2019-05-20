@@ -4,9 +4,11 @@ import { graphql, Link, StaticQuery } from 'gatsby';
 import Button from '@material-ui/core/Button';
 import { GetHeaderData } from '../../../typings/graphql';
 import AppBar from '@material-ui/core/AppBar';
+
 import { 
   LogoImg,
   ToolbarContainer,
+  AppBarStylings
 } from './Header.style';
 
 interface IQueryProps {
@@ -19,15 +21,15 @@ function Header(props: IQueryProps) {
     console.warn(`Header: GraphQL returned a null on build.`);
   }
   return (
-    <AppBar position="fixed">
+    <AppBar position="fixed" style={AppBarStylings}>
       <ToolbarContainer>
         <Link to='/'>
           <LogoImg fluid={data.logo.childImageSharp.fluid} alt='akatsukac logo'/>
         </Link>
         <div>
-          <Button color="inherit">About Me</Button>
-          <Button color="inherit">Projects</Button>
-          <Button color="inherit">Contact</Button>
+          <Button size="large" color="inherit">About Me</Button>
+          <Button size="large" color="inherit">Projects</Button>
+          <Button size="large" color="inherit">Contact</Button>
         </div>
       </ToolbarContainer>
     </AppBar>

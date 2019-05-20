@@ -11,7 +11,7 @@ export const FooterContainer = styled.div`
     padding: 0 24px;
     height: 56px;
     width: 100%;
-    background-color: #3f51b5;
+    background-color: #0D1217;
     display: grid;
     justify-items:center;
     grid-template-columns: 1fr 1fr 1fr;
@@ -20,7 +20,7 @@ export const FooterContainer = styled.div`
 export const CopyrightSpan = styled.span`
     grid-column-start: 2;
     margin: auto 0;
-    color: #fff;
+    color: #EDC202;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 0.875rem;
 `;
