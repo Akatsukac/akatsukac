@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { FunctionComponent } from "react";
 import { graphql, StaticQuery } from 'gatsby';
+import BackgroundImage from 'gatsby-background-image';
 import { GetBackgroundImage } from '../../typings/graphql';
 import { 
-  BackgroundContent,
+  BackgroundImageStyles,
   WelcomeContainer
 } from './Home.style';
 
@@ -17,12 +18,12 @@ function Home(props: IQueryProps) {
     console.warn(`Header: GraphQL returned a null on build.`);
   }
   return (
-    <BackgroundContent fluid={data.background.childImageSharp.fluid}>
+  <BackgroundImage style={BackgroundImageStyles} fluid={data.background.childImageSharp.fluid}>
       <WelcomeContainer>
         <h1>Christopher Akatsuka</h1>
         <h2>Software Engineer</h2>
       </WelcomeContainer>
-    </BackgroundContent>
+    </BackgroundImage>
   );
 }
 

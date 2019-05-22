@@ -1,13 +1,12 @@
 import styled from 'styled-components';
-import BackgroundImage from 'gatsby-background-image';
 
-export const BackgroundContent = styled(BackgroundImage)`
-    width: 100%;
-    min-height: inherit;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-`;
+export const BackgroundImageStyles = {
+    'width': '100%',
+    'backgroundPosition': 'center',
+    'backgroundRepeat': 'no-repeat',
+    'backgroundSize': '100% 100%',
+    'position': 'initial'
+};
 
 export const WelcomeContainer = styled.div`
     position: absolute;
