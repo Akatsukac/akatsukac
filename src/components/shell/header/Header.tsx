@@ -1,14 +1,16 @@
 import * as React from 'react';
 import { FunctionComponent } from "react";
 import { graphql, Link, StaticQuery } from 'gatsby';
-import Button from '@material-ui/core/Button';
 import { GetHeaderData } from '../../../typings/graphql';
 import AppBar from '@material-ui/core/AppBar';
 
 import { 
   LogoImg,
   ToolbarContainer,
-  AppBarStylings
+  AppBarStylings,
+  StyledLink,
+  LinkContainer,
+  LinksContainer
 } from './Header.style';
 
 interface IQueryProps {
@@ -26,11 +28,17 @@ function Header(props: IQueryProps) {
         <Link to='/'>
           <LogoImg fluid={data.logo.childImageSharp.fluid} alt='akatsukac logo'/>
         </Link>
-        <div>
-          <Button size="large" color="inherit">About Me</Button>
-          <Button size="large" color="inherit">Projects</Button>
-          <Button size="large" color="inherit">Contact</Button>
-        </div>
+        <LinksContainer>
+          <LinkContainer>
+            <StyledLink to='#projects'>Projects</StyledLink>
+          </LinkContainer>
+          <LinkContainer>
+            <StyledLink to='#about'>About Me</StyledLink>
+          </LinkContainer>
+          <LinkContainer>
+            <StyledLink to='#contact'>Contact</StyledLink>
+          </LinkContainer>
+        </LinksContainer>
       </ToolbarContainer>
     </AppBar>
   );

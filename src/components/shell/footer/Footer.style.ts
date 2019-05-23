@@ -8,25 +8,24 @@ export const LogoImg = styled(Img)`
 `;
 
 export const FooterContainer = styled.div`
+    position: absolute;
+    bottom: 0;
     padding: 0 24px;
     height: 56px;
     width: 100%;
     background-color: #0D1217;
-    display: grid;
-    justify-items:center;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
 `;
 
 export const CopyrightSpan = styled.span`
-    grid-column-start: 2;
     margin: auto 0;
-    color: #EDC202;
+    color: white;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 0.875rem;
 `;
 
 export const LinkContainer = styled.div`
-    grid-column-start: 3;
     display: flex;
     margin: auto 0 auto auto;
 `;
