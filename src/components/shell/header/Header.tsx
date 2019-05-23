@@ -7,7 +7,10 @@ import AppBar from '@material-ui/core/AppBar';
 import { 
   LogoImg,
   ToolbarContainer,
-  AppBarStylings
+  AppBarStylings,
+  StyledLink,
+  LinkContainer,
+  LinksContainer
 } from './Header.style';
 
 interface IQueryProps {
@@ -25,11 +28,17 @@ function Header(props: IQueryProps) {
         <Link to='/'>
           <LogoImg fluid={data.logo.childImageSharp.fluid} alt='akatsukac logo'/>
         </Link>
-        <div>
-          <Link to='#about'>About Me</Link>
-          <Link to='#projects'>Projects</Link>
-          <Link to='#contact'>Contact</Link>
-        </div>
+        <LinksContainer>
+          <LinkContainer>
+            <StyledLink to='#about'>About Me</StyledLink>
+          </LinkContainer>
+          <LinkContainer>
+            <StyledLink to='#projects'>Projects</StyledLink>
+          </LinkContainer>
+          <LinkContainer>
+            <StyledLink to='#contact'>Contact</StyledLink>
+          </LinkContainer>
+        </LinksContainer>
       </ToolbarContainer>
     </AppBar>
   );
