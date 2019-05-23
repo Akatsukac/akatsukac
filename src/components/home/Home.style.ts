@@ -16,13 +16,13 @@ export const WelcomeContainer = styled.div`
     text-align: center;
 
     h1 {
-        font-size: 75px;
+        font-size: 95px;
         color: white;
         font-weight: initial;
     }
 
     h2 {
-        font-size: 45px;
+        font-size: 65px;
         font-weight: initial;
     }
 `;

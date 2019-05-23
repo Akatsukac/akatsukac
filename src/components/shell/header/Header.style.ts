@@ -1,24 +1,20 @@
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-import { media } from '../../../styling/core';
 import Toolbar from '@material-ui/core/Toolbar';
 import { Link } from 'gatsby';
 
 
 export const LogoImg = styled(Img)`
-  min-height: 32px;
-  min-width: 32px;
-  
-  ${media(600)`
-    min-height: 48px;
-    min-width: 48px;
-  `}
+  min-height: 70px;
+  min-width: 70px;
 `;
 
 export const ToolbarContainer = styled(Toolbar)`
   display: flex;
   justify-content: space-between;
   color: white;
+  padding: 40px !important;
+
 `;
 
 export const AppBarStylings = {
@@ -32,13 +28,13 @@ export const LinksContainer = styled.div`
 `;
 
 export const LinkContainer = styled.div`
-  padding: 25px;
+  padding: 0 30px;
 `;
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
   color: white;
-  font-size: 25px;
+  font-size: 35px;
 
   :hover {
     border-bottom: 4px solid #D95920;
