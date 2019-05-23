@@ -33,7 +33,7 @@ function Header(props: IQueryProps) {
             <StyledLink to='#projects'>Projects</StyledLink>
           </LinkContainer>
           <LinkContainer>
-            <StyledLink to='#about'>About Me</StyledLink>
+            <StyledLink to='#about'>About</StyledLink>
           </LinkContainer>
           <LinkContainer>
             <StyledLink to='#contact'>Contact</StyledLink>
