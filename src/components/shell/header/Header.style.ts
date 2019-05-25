@@ -39,8 +39,8 @@ export const LinkContainer = styled.div`
 export const StyledLink = styled(Link)`
   text-decoration: none;
   color: white;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 300;
 
   :hover {
     border-bottom: 4px solid #D95920;
