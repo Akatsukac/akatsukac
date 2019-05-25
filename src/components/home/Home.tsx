@@ -18,7 +18,7 @@ function Home(props: IQueryProps) {
     console.warn(`Header: GraphQL returned a null on build.`);
   }
   return (
-  <BackgroundImage style={BackgroundImageStyles} fluid={data.background.childImageSharp.fluid}>
+    <BackgroundImage style={BackgroundImageStyles} fluid={data.background.childImageSharp.fluid}>
       <WelcomeContainer>
         <h1>CHRISTOPHER&nbsp;AKATSUKA</h1>
         <h2>SOFTWARE&nbsp;ENGINEER</h2>

@@ -1,11 +1,16 @@
 import * as React from 'react';
 import { FunctionComponent } from "react";
 
-function About(props: FunctionComponent) {
-  return (
-    <span>About section</span>
-  );
-}
-
+const About: FunctionComponent = () => {
+    return (
+      <>
+        <div>
+          <span>
+            About
+          </span>
+        </div>
+      </>
+    );
+};
 
 export default About;

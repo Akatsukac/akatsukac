@@ -1,11 +1,16 @@
 import * as React from 'react';
 import { FunctionComponent } from "react";
 
-function Projects(props: FunctionComponent) {
-  return (
-    <span>Projects section</span>
-  );
-}
-
+const Projects: FunctionComponent = () => {
+    return (
+      <>
+        <div>
+          <span>
+            Projects
+          </span>
+        </div>
+      </>
+    );
+};
 
 export default Projects;
