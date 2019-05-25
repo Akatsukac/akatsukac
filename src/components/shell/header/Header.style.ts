@@ -11,7 +11,8 @@ export const LogoImg = styled(Img)`
 
 export const ToolbarContainer = styled(Toolbar)`
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start !important;
+  flex-direction: column;
   color: white;
   padding: 30px !important;
 
@@ -20,15 +21,19 @@ export const ToolbarContainer = styled(Toolbar)`
 export const AppBarStylings = {
   'border-width': '0px',
   'box-shadow': '0px 0px',
-  'background-color': 'rgba(0,0,0,0.0)'
+  'background-color': 'rgba(0,0,0,0.0)',
+  'width': 'inherit',
+  'right': 'inherit'
 };
 
 export const LinksContainer = styled.div`
   display: flex;
+  flex-direction: column;
+  padding-top: 10px;
 `;
 
 export const LinkContainer = styled.div`
-  padding: 0 30px;
+  padding: 10px 0;
 `;
 
 export const StyledLink = styled(Link)`

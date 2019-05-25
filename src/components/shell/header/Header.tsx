@@ -30,13 +30,13 @@ function Header(props: IQueryProps) {
         </Link>
         <LinksContainer>
           <LinkContainer>
-            <StyledLink to='#projects'>Projects</StyledLink>
+            <StyledLink to='#projects'>PROJECTS</StyledLink>
           </LinkContainer>
           <LinkContainer>
-            <StyledLink to='#about'>About</StyledLink>
+            <StyledLink to='#about'>ABOUT</StyledLink>
           </LinkContainer>
           <LinkContainer>
-            <StyledLink to='#contact'>Contact</StyledLink>
+            <StyledLink to='#contact'>CONTACT</StyledLink>
           </LinkContainer>
         </LinksContainer>
       </ToolbarContainer>
