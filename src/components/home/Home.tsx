@@ -20,8 +20,8 @@ function Home(props: IQueryProps) {
   return (
   <BackgroundImage style={BackgroundImageStyles} fluid={data.background.childImageSharp.fluid}>
       <WelcomeContainer>
-        <h1>Christopher Akatsuka</h1>
-        <h2>Software Engineer</h2>
+        <h1>Christopher&nbsp;Akatsuka</h1>
+        <h2>Software&nbsp;Engineer</h2>
       </WelcomeContainer>
     </BackgroundImage>
   );

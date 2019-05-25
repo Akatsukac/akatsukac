@@ -5,15 +5,15 @@ import { Link } from 'gatsby';
 
 
 export const LogoImg = styled(Img)`
-  min-height: 70px;
-  min-width: 70px;
+  min-height: 55px;
+  min-width: 55px;
 `;
 
 export const ToolbarContainer = styled(Toolbar)`
   display: flex;
   justify-content: space-between;
   color: white;
-  padding: 40px !important;
+  padding: 30px !important;
 
 `;
 
@@ -34,7 +34,8 @@ export const LinkContainer = styled.div`
 export const StyledLink = styled(Link)`
   text-decoration: none;
   color: white;
-  font-size: 35px;
+  font-size: 18px;
+  font-weight: 700;
 
   :hover {
     border-bottom: 4px solid #D95920;
