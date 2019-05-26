@@ -17,9 +17,9 @@ export const ToolbarContainer = styled(Toolbar)`
 `;
 
 export const AppBarStylings = {
-  'border-width': '0px',
-  'box-shadow': '0px 0px',
-  'background-color': 'rgba(0,0,0,0.0)'
+  'borderWidth': '0px',
+  'boxShadow': '0px 0px',
+  'backgroundColor': 'rgba(0,0,0,0.0)'
 };
 
 export const LinksContainer = styled.div`
@@ -40,4 +40,8 @@ export const StyledLink = styled(Link)`
     border-bottom: 4px solid #D95920;
     padding-bottom: 5px;
   }
+`;
+
+export const StyledAnchor = styled.a`
+  cursor: pointer;
 `;

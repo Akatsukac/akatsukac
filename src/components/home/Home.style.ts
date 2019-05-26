@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const BackgroundImageStyles = {
     'width': '100%',
-    'min-height': '100vh',
+    'minHeight': '100vh',
     'backgroundPosition': 'center',
     'backgroundRepeat': 'no-repeat',
     'backgroundSize': '100% 100%',

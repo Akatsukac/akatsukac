@@ -7,6 +7,8 @@ import {
   BackgroundImageStyles,
   WelcomeContainer
 } from './Home.style';
+import ScrollableSection from 'react-update-url-on-scroll';
+
 
 interface IQueryProps {
   data: GetBackgroundImage.Query
@@ -18,12 +20,14 @@ function Home(props: IQueryProps) {
     console.warn(`Header: GraphQL returned a null on build.`);
   }
   return (
-    <BackgroundImage style={BackgroundImageStyles} fluid={data.background.childImageSharp.fluid}>
-      <WelcomeContainer>
-        <h1>CHRISTOPHER&nbsp;AKATSUKA</h1>
-        <h2>SOFTWARE&nbsp;ENGINEER</h2>
-      </WelcomeContainer>
-    </BackgroundImage>
+    <ScrollableSection hash={'home'}>
+      <BackgroundImage style={BackgroundImageStyles} fluid={data.background.childImageSharp.fluid}>
+        <WelcomeContainer>
+          <h1>CHRISTOPHER&nbsp;AKATSUKA</h1>
+          <h2>SOFTWARE&nbsp;ENGINEER</h2>
+        </WelcomeContainer>
+      </BackgroundImage>
+    </ScrollableSection>
   );
 }
 
