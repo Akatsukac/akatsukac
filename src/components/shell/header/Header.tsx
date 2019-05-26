@@ -9,10 +9,10 @@ import {
   LogoImg,
   ToolbarContainer,
   AppBarStylings,
-  StyledLink,
+  StyledSectionAnchor,
   LinkContainer,
   LinksContainer,
-  StyledAnchor
+  StyledLogoAnchor
 } from './Header.style';
 
 interface IQueryProps {
@@ -28,19 +28,25 @@ function Header(props: IQueryProps) {
     <AppBar position="fixed" style={AppBarStylings}>
       <ToolbarContainer>
         <ScrollableLink href='#home'>
-          <StyledAnchor>
+          <StyledLogoAnchor>
             <LogoImg fluid={data.logo.childImageSharp.fluid} alt='akatsukac logo'/>
-          </StyledAnchor>
+          </StyledLogoAnchor>
         </ScrollableLink>
         <LinksContainer>
           <LinkContainer>
-            <StyledLink to='#projects'>PROJECTS</StyledLink>
+            <ScrollableLink href='#projects'>
+              <StyledSectionAnchor>PROJECTS</StyledSectionAnchor>
+            </ScrollableLink>
           </LinkContainer>
           <LinkContainer>
-            <StyledLink to='#about'>ABOUT</StyledLink>
+            <ScrollableLink href='#about'>
+              <StyledSectionAnchor>ABOUT</StyledSectionAnchor>
+            </ScrollableLink>
           </LinkContainer>
           <LinkContainer>
-            <StyledLink to='#contact'>CONTACT</StyledLink>
+            <ScrollableLink href='#contact'>
+              <StyledSectionAnchor>CONTACT</StyledSectionAnchor>
+            </ScrollableLink>
           </LinkContainer>
         </LinksContainer>
       </ToolbarContainer>

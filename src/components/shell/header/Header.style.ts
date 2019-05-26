@@ -1,8 +1,6 @@
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import Toolbar from '@material-ui/core/Toolbar';
-import { Link } from 'gatsby';
-
 
 export const LogoImg = styled(Img)`
   min-height: 55px;
@@ -30,7 +28,7 @@ export const LinkContainer = styled.div`
   padding: 0 30px;
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledSectionAnchor = styled.a`
   text-decoration: none;
   color: white;
   font-size: 18px;
@@ -39,9 +37,10 @@ export const StyledLink = styled(Link)`
   :hover {
     border-bottom: 4px solid #D95920;
     padding-bottom: 5px;
+    cursor: pointer;
   }
 `;
 
-export const StyledAnchor = styled.a`
+export const StyledLogoAnchor = styled.a`
   cursor: pointer;
 `;
