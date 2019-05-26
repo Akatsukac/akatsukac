@@ -8,12 +8,10 @@ export const LogoImg = styled(Img)`
 `;
 
 export const FooterContainer = styled.div`
-    position: absolute;
-    bottom: 0;
     padding: 0 24px;
     height: 60px;
     width: 100%;
-    background-color: #0D1217;
+    background-color: #2D3739;
     display: flex;
     justify-content: space-between;
 `;

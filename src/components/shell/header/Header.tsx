@@ -1,16 +1,18 @@
 import * as React from 'react';
 import { FunctionComponent } from "react";
-import { graphql, Link, StaticQuery } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import { GetHeaderData } from '../../../typings/graphql';
 import AppBar from '@material-ui/core/AppBar';
+import { ScrollableLink } from 'react-update-url-on-scroll';
 
 import { 
   LogoImg,
   ToolbarContainer,
   AppBarStylings,
-  StyledLink,
+  StyledSectionAnchor,
   LinkContainer,
-  LinksContainer
+  LinksContainer,
+  StyledLogoAnchor
 } from './Header.style';
 
 interface IQueryProps {
@@ -25,18 +27,26 @@ function Header(props: IQueryProps) {
   return (
     <AppBar position="fixed" style={AppBarStylings}>
       <ToolbarContainer>
-        <Link to='/'>
-          <LogoImg fluid={data.logo.childImageSharp.fluid} alt='akatsukac logo'/>
-        </Link>
+        <ScrollableLink href='#home'>
+          <StyledLogoAnchor>
+            <LogoImg fluid={data.logo.childImageSharp.fluid} alt='akatsukac logo'/>
+          </StyledLogoAnchor>
+        </ScrollableLink>
         <LinksContainer>
           <LinkContainer>
-            <StyledLink to='#projects'>PROJECTS</StyledLink>
+            <ScrollableLink href='#projects'>
+              <StyledSectionAnchor>PROJECTS</StyledSectionAnchor>
+            </ScrollableLink>
           </LinkContainer>
           <LinkContainer>
-            <StyledLink to='#about'>ABOUT</StyledLink>
+            <ScrollableLink href='#about'>
+              <StyledSectionAnchor>ABOUT</StyledSectionAnchor>
+            </ScrollableLink>
           </LinkContainer>
           <LinkContainer>
-            <StyledLink to='#contact'>CONTACT</StyledLink>
+            <ScrollableLink href='#contact'>
+              <StyledSectionAnchor>CONTACT</StyledSectionAnchor>
+            </ScrollableLink>
           </LinkContainer>
         </LinksContainer>
       </ToolbarContainer>

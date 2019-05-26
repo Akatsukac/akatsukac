@@ -1,10 +1,16 @@
 import * as React from 'react';
-import { FunctionComponent } from "react";
+import ScrollableSection from 'react-update-url-on-scroll';
 
-function Contact(props: FunctionComponent) {
-  return (
-    <span>Contact section</span>
-  );
+export default class Contact extends React.Component {
+  render() {
+    return (
+      <ScrollableSection hash={'contact'}>
+        <div>
+          <span>
+            Contact
+          </span>
+        </div>
+      </ScrollableSection>
+    );
+  }
 }
-
-export default Contact;

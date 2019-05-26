@@ -21,21 +21,20 @@ function Footer(props: IQueryProps) {
     console.warn(`Footer: GraphQL returned a null on build.`);
   }
   return (
-
-      <FooterContainer>
-        <CopyrightSpan>© Christopher Akatsuka 2019</CopyrightSpan>
-        <LinkContainer>
-          <a href='mailto:akatsukac@gmail.com' rel="noopener nofollower">
-            <LogoImg fluid={data.email.childImageSharp.fluid} alt='email icon'/>
-          </a>
-          <a href='https://www.linkedin.com/in/akatsukac/' target="__blank" rel="noopener nofollower">
-            <LogoImg fluid={data.linkedin.childImageSharp.fluid} alt='linkedin icon'/>
-          </a>
-          <a href='https://github.com/Akatsukac/akatsukac' target="__blank" rel="noopener nofollower">
-            <LogoImg fluid={data.github.childImageSharp.fluid} alt='github icon'/>
-          </a>
-        </LinkContainer>
-      </FooterContainer>
+    <FooterContainer>
+      <CopyrightSpan>© Christopher Akatsuka 2019</CopyrightSpan>
+      <LinkContainer>
+        <a href='mailto:akatsukac@gmail.com' rel="noopener nofollower">
+          <LogoImg fluid={data.email.childImageSharp.fluid} alt='email icon'/>
+        </a>
+        <a href='https://www.linkedin.com/in/akatsukac/' target="__blank" rel="noopener nofollower">
+          <LogoImg fluid={data.linkedin.childImageSharp.fluid} alt='linkedin icon'/>
+        </a>
+        <a href='https://github.com/Akatsukac/akatsukac' target="__blank" rel="noopener nofollower">
+          <LogoImg fluid={data.github.childImageSharp.fluid} alt='github icon'/>
+        </a>
+      </LinkContainer>
+    </FooterContainer>
   );
 }
 
