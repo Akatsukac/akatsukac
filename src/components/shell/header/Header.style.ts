@@ -15,10 +15,17 @@ export const ToolbarContainer = styled(Toolbar)`
 `;
 
 export const AppBarStylings = {
-  'borderWidth': '0px',
-  'boxShadow': '0px 0px',
+  'borderWidth': '0',
+  'boxShadow': '0 0',
   'backgroundColor': 'rgba(0,0,0,0.0)'
 };
+
+export const TransAppBarStylings = `
+  border-width: 0; 
+  box-shadow: 0 0; 
+  background-color: rgba(0,0,0,0.0); 
+  transition: all 0.5s ease-in;
+`;
 
 export const LinksContainer = styled.div`
   display: flex;
