@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FunctionComponent } from "react";
+import { FunctionComponent } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import { GetHeaderData } from '../../../typings/graphql';
 import AppBar from '@material-ui/core/AppBar';

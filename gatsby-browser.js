@@ -3,9 +3,10 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
-
- import './src/global.css';
- // ES5 way
+import { configureAnchors } from 'react-update-url-on-scroll';
+import { TransAppBarStylings } from './src/components/shell/header/Header.style';
+import './src/global.css';
+// ES5 way
 // exports.onClientEntry = () => {
 // ES6 way
 export const onClientEntry = () => {  
@@ -14,4 +15,20 @@ export const onClientEntry = () => {
       import(`intersection-observer`)
       console.log(`# IntersectionObserver is polyfilled!`)
     }
+
+    configureAnchors(
+      {onSectionEnter: (newState, oldState) => {
+        if (typeof newState !== 'undefined') {
+          let header = document.getElementsByTagName("Header");
+          if (header.length === 0) 
+            return 
+          if (newState['hash'] !== 'home') {
+            header[0].setAttribute('style', 'background-color: #2D3739; transition: all 0.5s ease-in;');
+          } else {
+            header[0].setAttribute('style', TransAppBarStylings);
+          }
+        }
+      }
+    });
   }
+ 

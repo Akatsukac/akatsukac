@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { FunctionComponent } from "react";
+import { FunctionComponent } from 'react';
 import Home from "../components/home/Home";
 import About from "../components/about/About";
 import Contact from "../components/contact/Contact";
