@@ -41,7 +41,7 @@ export const StyledSectionAnchor = styled.a`
   font-size: 18px;
   font-weight: 700;
 
-  :hover {
+  :hover, &.selected {
     border-bottom: 4px solid #D95920;
     padding-bottom: 5px;
     cursor: pointer;

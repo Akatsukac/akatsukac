@@ -35,17 +35,17 @@ function Header(props: IQueryProps) {
         <LinksContainer>
           <LinkContainer>
             <ScrollableLink href='#projects'>
-              <StyledSectionAnchor>PROJECTS</StyledSectionAnchor>
+              <StyledSectionAnchor className="section-anchor" id="projects">PROJECTS</StyledSectionAnchor>
             </ScrollableLink>
           </LinkContainer>
           <LinkContainer>
             <ScrollableLink href='#about'>
-              <StyledSectionAnchor>ABOUT</StyledSectionAnchor>
+              <StyledSectionAnchor className="section-anchor" id="about">ABOUT</StyledSectionAnchor>
             </ScrollableLink>
           </LinkContainer>
           <LinkContainer>
             <ScrollableLink href='#contact'>
-              <StyledSectionAnchor>CONTACT</StyledSectionAnchor>
+              <StyledSectionAnchor className="section-anchor" id="contact">CONTACT</StyledSectionAnchor>
             </ScrollableLink>
           </LinkContainer>
         </LinksContainer>
