@@ -27,7 +27,6 @@ export const onClientEntry = () => {
             return; 
           if (newState['hash'] !== 'home') {
             header[0].setAttribute('style', 'background-color: #2D3739; transition: all 0.5s ease-in;');
-
           } else {
             header[0].setAttribute('style', TransAppBarStylings);
           }
