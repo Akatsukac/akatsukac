@@ -12,8 +12,8 @@ const IndexPage: FunctionComponent = () => (
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Home/>
     <Projects/>
-    <About/>
-    <Contact/>
+    {/* <About/>
+    <Contact/> */}
   </Shell>
 )
 
