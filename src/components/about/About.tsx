@@ -46,7 +46,7 @@ export default class About extends React.Component {
                 </StyledParagraph>
               </StyledParagraphContainer>
             </StyledContentContainer>
-              <a href="resume.pdf" download>
+              <a href="Final-Akatsuka-Resume.pdf" download>
                 <Button variant="contained" size="large" color="primary" style={ButtonStyles}>
                   DOWNLOAD RESUME
                 </Button>
