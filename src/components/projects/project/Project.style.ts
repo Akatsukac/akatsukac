@@ -14,16 +14,26 @@ export const CollapsibleContainer = styled.div`
 export const ProjectContainer = styled.div`
     padding: 0 60px;
     display: grid;
+    min-height: 350px;
 `;
 export const ButtonContainer = styled.button`
     position: absolute;
     right: 50%;
-    bottom: 50%;
+    top: 0%;
     transform-origin: 100% 0;
-    transform: rotate(-90deg) translateX(25%);
+    transform: rotate(-90deg);
     display: flex;
     background: none;
     border: none;
+    margin: 32px 0;
+
+    &.active {
+        display: flex;
+    }
+
+    &.inactive {
+        display: none;
+    }
 `;
 
 export const LogoImg = styled(Img)`
