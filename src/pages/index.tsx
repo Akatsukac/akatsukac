@@ -13,7 +13,7 @@ const IndexPage: FunctionComponent = () => (
     <Home/>
     <Projects/>
     <About/>
-    <Contact/>
+    {/* <Contact/> */}
   </Shell>
 )
 
