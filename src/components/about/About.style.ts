@@ -35,6 +35,7 @@ export const StyledParagraph = styled.p`
 
     font-size: 24px;
     font-weight: 400;
+    color: #2D3739;
 `;
 
 export const ButtonStyles = {

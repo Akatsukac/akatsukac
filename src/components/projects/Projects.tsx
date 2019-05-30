@@ -19,34 +19,33 @@ export default class Projects extends React.Component {
             <StyledParagraph>
               Every year, Capital One spends billions of dollars paying a third party service to perform
               manual classification and extraction of uploaded dealer documents.  By utilizing 
-              Tesseract 4.0 and Inception v3, my team built a python microservice pipeline that 
-              classified and extracted individual pages. 
+              open source text extraction engine and image classifier, my team built a python microservice
+              pipeline that classified and extracted individual pages. 
               
               I built the image preprocessing Python microservice. The dockerized image preprocessing 
-              tool leveraged opencv to grayscale images, convert the file type, and perform transformations
-              to improve the accuracy of our classification and extraction services. We deployed the 
-              container on Amazon Web Services' Elastic Container Service. When an upload occurred, 
-              our orchestrator placed a message in a Simple Queue Service queue, which my preprocessing 
-              service consumed. 
+              tool leveraged OpenCV to grayscale images, convert files to jpeg, and perform content isolation
+              transformations to increase accuracy. We deployed the container on Amazon Web Services' 
+              Elastic Container Service. When an upload occurred, our orchestrator placed a message in
+              a Simple Queue Service queue, which my preprocessing service consumed. 
 
               Upon completion, my service saved the processed image in an S3 bucket and placed
               a message for the next microservice in our pipeline to consume.  In the event of failure,
               we retried up to three times and if the failure still occurred, we placed a message
-              in a dead letter queue for later review.
+              in a dead letter queue for manual review.
 
               I also built an Angular 4 re-classification tool to help with the retraining of our 
-              classification model.  Users could see uploaded images along with their classification.
+              classification model.  Users could see uploaded images alongside their classification.
               The user could then select the correct classification and these new labels could then 
               contribute directly to our next model retraining to help improve accuracy.
             </StyledParagraph>
             <StyledParagraph className="collapsible-content collapsed">
-              Designing an asynchronous service that could handle massive scale while also gracefully
-              failing.  I earned my Amazon Web Service certification and leveraged the services I learned
-              about to address these concerns.
+              In order to design an asynchronous service that could handle massive scale while also gracefully
+              failing, I looked towards Amazon Web Services' cloud offerings.  I earned my Amazon Web Service
+              certification during the process of scoping out appropriate services to leverage.
 
-              Determining the best image transformations that would help to improve classification and
-              extraction accuracy while still meeting runtime SLA's.  I ultimately had to experiment and
-              go very deep into opencv documentation to avoid costly operations with low impact.
+              I experimented with OpenCV while reading deep into its documentation in order to determine
+              the best image transformations that would help improve classification and extraction accuracy
+              while still meeting runtime SLA's. 
             </StyledParagraph>
           </Project>
           <Project>
@@ -63,10 +62,9 @@ export default class Projects extends React.Component {
               of "clean deals" (deals that provided all required documentation on the first try).
             </StyledParagraph>
             <StyledParagraph className="collapsible-content collapsed">
-              Programming business logic into readable and maintainable classes.  Ultimately, I
-              leveraged the Builder pattern to produce basic requirements, add on any special
-              requirements due to application parameters, and suppress any requirements that
-              had exceptions
+              I leveraged the Builder pattern to programming business logic into readable and maintainable classes.
+              This allowed me to separate the logic for universal requirements and special requirements due to 
+              application parameters. This made unit and functional testing much easier.
             </StyledParagraph>
           </Project>
           <Project>
@@ -82,19 +80,17 @@ export default class Projects extends React.Component {
               demo to dealers and iterated on their feedback.  
             </StyledParagraph>
             <StyledParagraph className="collapsible-content collapsed">
-              Architecting for active-passive resiliency, particularly with regards to the
-              images stored for previewing purposes. I addressed this issue by creating multiple
-              Amazon Web Service S3 buckets with data replication turned on. 
+              I utilized Amazon Web Services' S3 data replication to achieve active-passive resiliency.
+              This meant that in the event of failure in one region, we could simply switch route 53 
+              url's and the failover region would have the same images stored for previewing purposes.  
 
-              Handling multiple file types given that dealers might provide anything from an image
-              file to a PDF. I addressed this by building Amazon Web Service Lambda functions to
-              create a PDF copy of every image uploaded to S3. The document previewer could then
-              leverage the PDF copy, which provided all of PDFJS's features across all browser types.
+              I handled the many different file types dealers provided by building Amazon Web Service 
+              Lambda function that created a PDF copy of every image uploaded to S3. The document previewer
+              could then leverage the PDF copy, which provided all of PDFJS's features across all browser types.
 
-              Building responsive pages that could work across all modern browsers. I had to learn
-              about break points, polyfills, and the wonders of caniuse.com, but I managed to
-              provide a consistent experience from IE11 to edge mobile.  I found that using Sauce
-              Labs in conjunction with the Selenium web driver allowed me to quickly test my pages
+              Through this project, I learned how to build responsive pages that could work across all 
+              modern browsers. I had to learn about break points, polyfills, and the wonders of caniuse.com.
+              Sauce Labs in conjunction with the Selenium web driver allowed me to quickly test my pages
               across supported browsers very quickly.
             </StyledParagraph>
           </Project>
@@ -103,28 +99,24 @@ export default class Projects extends React.Component {
               Dealer Navigator - Micro Frontend Target State
             </StyledProjectHeader>
             <StyledParagraph>
-              After successfully rolling out the fast funding pilot nationwide, I led as the 
-              software lead for a team of four software engineers in building towards a micro
-              frontend target state. We wanted to transform the multi-page flow that existed
+              After successfully rolling out the fast funding pilot nationwide, I took on the 
+              role of software lead for a team of four software engineers in building towards a 
+              micro frontend target state. We wanted to transform the multi-page flow that existed
               within the Dealer Navigator monolith into a standalone web app with a dedicated
               backend for frontend such that we could release our code changes independent of
-              other services.  Moreover, to fully automate all testing during each deployment
+              other services.  We also wanted to fully automate all testing during each deployment
               process and to modularize and refactor existing code into Angular 7 docker
               containers, which we would host on Amazon Web Service ECS clusters.  
             </StyledParagraph>
             <StyledParagraph className="collapsible-content collapsed">
-              Communication with Amazon Web Services. I replaced all instances of hardcoded 
-              access credentials with AWS's brand new S3 SDK along with AWS credential provider
-              chains.  
+              I improved security by replacing all instances of hardcoded access credentials with
+              AWS's brand new S3 SDK along with AWS credential provider chains and adding URL guards. 
+              In the monolith, we noticed issues where users could manually modify the URL and access
+              experiences they shouldn't have been able to. 
 
-              Architecture for a multi-tab page with different pilots for each tab. As a community,
-              we decided to build each of our tab's content into its own library to be stored in
-              Artifactory. At build time, the shell application would pull the latest version of
-              each of our artifacts to be lazily rendered.
-
-              Passing data between the shell app (which handled most shared API calls) and individual
-              child components. I learned we could expose artifact interfaces and services through a
-              public_api.ts file.
+              As a community, we decided to build each of our tab's content into its own library to 
+              be stored in Artifactory. At build time, the shell application would pull the latest 
+              version of each of our artifacts to be lazily rendered.
             </StyledParagraph>
           </Project>
         </StyledProjectsContainer>

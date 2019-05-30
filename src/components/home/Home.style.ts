@@ -25,5 +25,6 @@ export const WelcomeContainer = styled.div`
     h2 {
         font-size: 32px;
         font-weight: 400;
+        color: #2D3739;
     }
 `;
