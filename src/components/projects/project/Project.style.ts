@@ -21,7 +21,7 @@ export const ButtonContainer = styled.button`
     right: 50%;
     top: 0%;
     transform-origin: 100% 0;
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) translateY(-20%);
     display: flex;
     background: none;
     border: none;
