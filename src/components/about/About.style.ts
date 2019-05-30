@@ -36,5 +36,7 @@ export const ButtonStyles = {
     'position': 'absolute',
     'left': '40%',
     'minWidth': '300px',
-    'minHeight': '70px'
+    'minHeight': '70px',
+    'fontSize': '1.3rem',
+    'border': '7px solid #2D3739'
 };
