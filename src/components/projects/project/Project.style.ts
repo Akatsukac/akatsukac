@@ -26,6 +26,7 @@ export const ButtonContainer = styled.button`
     background: none;
     border: none;
     margin: 32px 0;
+    color: #2D3739;
 
     &.active {
         display: flex;
@@ -39,6 +40,7 @@ export const ButtonContainer = styled.button`
 export const LogoImg = styled(Img)`
   min-height: 55px;
   min-width: 55px;
+  transform: rotate(90deg);
 `;
 
 export const StyledSpan = styled.span`
