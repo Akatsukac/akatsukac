@@ -2,14 +2,18 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 export const StyledAboutContainer = styled.div`
-    padding: 50px 0 90px 0;
-    position: relative;
+    padding: 50px 0;
+    text-align: center;
+`;
+
+export const StyledAnchor = styled.a`
+    text-decoration: none;
 `;
 
 export const StyledContentContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 `;
 
 export const LogoImg = styled(Img)`
@@ -20,6 +24,7 @@ export const LogoImg = styled(Img)`
 export const StyledParagraphContainer = styled.div`
     max-width: 40%;
     margin: 0;
+    text-align: initial;
 `;
 
 export const StyledParagraph = styled.p`
@@ -33,8 +38,8 @@ export const StyledParagraph = styled.p`
 `;
 
 export const ButtonStyles = {
-    'position': 'absolute',
-    'left': '40%',
     'minWidth': '300px',
-    'minHeight': '70px'
+    'minHeight': '70px',
+    'fontSize': '1.3rem',
+    'border': '7px solid #2D3739',
 };

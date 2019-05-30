@@ -8,7 +8,8 @@ import {
   StyledParagraphContainer,
   StyledParagraph,
   StyledContentContainer,
-  ButtonStyles
+  ButtonStyles,
+  StyledAnchor
 } from './About.style';
 
 export default class About extends React.Component {
@@ -46,11 +47,11 @@ export default class About extends React.Component {
                 </StyledParagraph>
               </StyledParagraphContainer>
             </StyledContentContainer>
-              <a href="Final-Akatsuka-Resume.pdf" download>
-                <Button variant="contained" size="large" color="primary" style={ButtonStyles}>
+              <StyledAnchor href="https://github.com/Akatsukac/akatsukac/raw/master/src/assets/docs/Final-Akatsuka-Resume.pdf" download>
+                <Button variant="outlined" size="large" style={ButtonStyles}>
                   DOWNLOAD RESUME
                 </Button>
-              </a>
+              </StyledAnchor>
         </StyledAboutContainer>
       </ScrollableSection>
       )}></StaticQuery>
