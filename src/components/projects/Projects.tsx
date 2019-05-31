@@ -24,7 +24,7 @@ export default class Projects extends React.Component {
               
               I built the image preprocessing Python microservice. The dockerized image preprocessing 
               tool leveraged OpenCV to grayscale images, convert files to jpeg, and perform content isolation
-              transformations to increase accuracy. We deployed the container on Amazon Web Services' 
+              transformations to increase accuracy. We deployed the container on an Amazon Web Services 
               Elastic Container Service. When an upload occurred, our orchestrator placed a message in
               a Simple Queue Service queue, which my preprocessing service consumed. 
 
@@ -40,7 +40,7 @@ export default class Projects extends React.Component {
             </StyledParagraph>
             <StyledParagraph className="collapsible-content collapsed">
               In order to design an asynchronous service that could handle massive scale while also gracefully
-              failing, I looked towards Amazon Web Services' cloud offerings.  I earned my Amazon Web Service
+              failing, I looked towards Amazon Web Services' cloud offerings.  I earned my Amazon Web Services
               certification during the process of scoping out appropriate services to leverage.
 
               I experimented with OpenCV while reading deep into its documentation in order to determine
@@ -84,7 +84,7 @@ export default class Projects extends React.Component {
               This meant that in the event of failure in one region, we could simply switch route 53 
               url's and the failover region would have the same images stored for previewing purposes.  
 
-              I handled the many different file types dealers provided by building Amazon Web Service 
+              I handled the many different file types dealers provided by building an Amazon Web Services 
               Lambda function that created a PDF copy of every image uploaded to S3. The document previewer
               could then leverage the PDF copy, which provided all of PDFJS's features across all browser types.
 
@@ -106,7 +106,7 @@ export default class Projects extends React.Component {
               backend for frontend such that we could release our code changes independent of
               other services.  We also wanted to fully automate all testing during each deployment
               process and to modularize and refactor existing code into Angular 7 docker
-              containers, which we would host on Amazon Web Service ECS clusters.  
+              containers, which we would host on Amazon Web Services ECS clusters.  
             </StyledParagraph>
             <StyledParagraph className="collapsible-content collapsed">
               I improved security by replacing all instances of hardcoded access credentials with
