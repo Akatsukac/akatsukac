@@ -24,7 +24,7 @@ export const TransAppBarStylings = `
   border-width: 0; 
   box-shadow: 0 0; 
   background-color: rgba(0,0,0,0.0); 
-  transition: all 0.5s ease-in;
+  transition: all 0.25s ease-in;
 `;
 
 export const LinksContainer = styled.div`

@@ -22,11 +22,8 @@ export default class About extends React.Component {
         <StyledAboutContainer> 
           <LogoImg fluid={data.about.childImageSharp.fluid} alt='about'/>
           <StyledParagraphContainer>
-            <StyledParagraph>
-              Hello! 
-            </StyledParagraph>
             <StyledParagraph>                
-              My name is Christopher Akatsuka and thank you for visiting my website. I graduated from
+              My name is Christopher Akatsuka. I graduated from
               the University of Pennsylvania with a BSE and MSE in Computer and Information Science. 
               I am currently a Senior Associate Software Engineer at Capital One in Plano, Texas where 
               I work on full stack projects.
