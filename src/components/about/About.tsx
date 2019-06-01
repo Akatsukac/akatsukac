@@ -25,9 +25,9 @@ export default class About extends React.Component {
               <StyledParagraphContainer>
                 <StyledParagraph>
                   Hello, I am Christopher Akatsuka and thank you for visiting my website. I graduated from
-                  the University of Pennsylvania in 2016 with a BSE in Computer and Information Science and
-                  in 2017 with my MSE in Computer and Information Science. I am currently a Senior Associate
-                  Software Engineer at Capital One in Plano, Texas where I work on full stack projects.
+                  the University of Pennsylvania with a BSE and MSE in Computer and Information Science. 
+                  I am currently a Senior Associate Software Engineer at Capital One in Plano, Texas where 
+                  I work on full stack projects.
                 </StyledParagraph>
                 <StyledParagraph>
                   I have productionized multiple Python and Java microservices along with Angular 2+ web apps for work, so
@@ -36,7 +36,7 @@ export default class About extends React.Component {
                 </StyledParagraph>
                 <StyledParagraph>
                   In my free time, I enjoy powerlifting and collecting Funko pops. I recently lifted a meet PR for 1001lbs and 
-                  surpassed 250 Funko pops.
+                  surpassed 250 Funko pops in my collection.
                 </StyledParagraph>
               </StyledParagraphContainer>
             </StyledContentContainer>
