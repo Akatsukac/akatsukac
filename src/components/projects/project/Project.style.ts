@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-export const ChildrenContainer = styled.div`
-`;
-
 export const CollapsibleContainer = styled.div`
     position: relative;
     padding: 20px;

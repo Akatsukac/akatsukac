@@ -36,5 +36,5 @@ export const ColumnsContainer = styled.div`
   width: 100%;
   justify-content: space-around;
   padding: 30px 0;
-  flex-grow: 1;
+  flex-grow: 2;
 `;
