@@ -24,6 +24,10 @@ export const ButtonContainer = styled.button`
     margin: 32px 0;
     color: #2D3739;
 
+    @media all and (-ms-high-contrast: none) {
+      position: relative;
+    }
+
     &.active {
         display: flex;
     }
