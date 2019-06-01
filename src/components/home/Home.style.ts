@@ -6,7 +6,7 @@ export const BackgroundImageStyles = {
     'backgroundPosition': 'center',
     'backgroundRepeat': 'no-repeat',
     'backgroundSize': '100% 100%',
-    'position': 'initial'
+    'position': 'relative'
 };
 
 export const WelcomeContainer = styled.div`
