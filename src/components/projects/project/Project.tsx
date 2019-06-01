@@ -58,7 +58,9 @@ function Project(props: IQueryProps) {
   
   return (
     <ProjectContainer className="project">
-      {children}
+      <div>
+        {children}
+      </div>
       <CollapsibleContainer>
         <ButtonContainer className="active" onClick={(e:Event) => triggerEvent(e)}>
           <StyledSpan>READ&nbsp;MORE</StyledSpan>

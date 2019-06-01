@@ -5,6 +5,7 @@ export const CollapsibleContainer = styled.div`
     position: relative;
     padding: 20px;
 `;
+
 export const ProjectContainer = styled.div`
     padding: 0 60px;
     display: flex;
