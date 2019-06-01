@@ -34,7 +34,7 @@ export const ColumnContainer = styled.div`
 export const ColumnsContainer = styled.div`
   display: inline-flex;
   width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: 30px 0;
   flex-grow: 1;
 `;

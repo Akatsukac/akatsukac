@@ -10,7 +10,7 @@ export const StyledAboutContainer = styled.div`
   text-align: center;
   min-height: calc(100vh - 115px);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 `;
 
 export const LogoImg = styled(Img)`
