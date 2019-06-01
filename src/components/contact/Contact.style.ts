@@ -23,7 +23,7 @@ export const StyledH3 = styled.h3`
 export const ContactContainer = styled.div`
     width: 100%;
     text-align: center;
-    min-height: 80vh;
+    min-height: calc(100vh - 60px - 115px);
     display: flex;
     flex-direction: column;
 `;
