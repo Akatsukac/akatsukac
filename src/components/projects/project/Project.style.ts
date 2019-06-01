@@ -1,19 +1,13 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-export const ChildrenContainer = styled.div`
-    grid-column: 1;
-`;
-
 export const CollapsibleContainer = styled.div`
     position: relative;
-    width: 100%;
-    grid-column: 2;
     padding: 20px;
 `;
 export const ProjectContainer = styled.div`
     padding: 0 60px;
-    display: grid;
+    display: flex;
     min-height: 350px;
     overflow: hidden;
 `;

@@ -4,7 +4,6 @@ import { graphql, StaticQuery } from 'gatsby';
 import { GetProjectData } from '../../../typings/graphql';
 import {
   ProjectContainer,
-  ChildrenContainer,
   CollapsibleContainer,
   ButtonContainer,
   LogoImg,
@@ -59,9 +58,7 @@ function Project(props: IQueryProps) {
   
   return (
     <ProjectContainer className="project">
-      <ChildrenContainer>
-        {children}
-      </ChildrenContainer>
+      {children}
       <CollapsibleContainer>
         <ButtonContainer className="active" onClick={(e:Event) => triggerEvent(e)}>
           <StyledSpan>READ&nbsp;MORE</StyledSpan>

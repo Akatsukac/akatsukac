@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.div`
-    height: 60px;
+    line-height: 60px;
     background-color: #2D3739;
     text-align: center;
-    display: grid;
 `;
 
 export const CopyrightSpan = styled.span`
