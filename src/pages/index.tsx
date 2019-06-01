@@ -4,6 +4,7 @@ import Home from "../components/home/Home";
 import About from "../components/about/About";
 import Projects from "../components/projects/Projects";
 import Shell from "../components/shell/Shell";
+import Contact from "../components/contact/Contact";
 import SEO from "../components/utilities/seo";
 
 const IndexPage: FunctionComponent = () => (
@@ -12,6 +13,7 @@ const IndexPage: FunctionComponent = () => (
     <Home/>
     <Projects/>
     <About/>
+    <Contact/>
   </Shell>
 )
 

@@ -17,8 +17,8 @@ export const StyledContentContainer = styled.div`
 `;
 
 export const LogoImg = styled(Img)`
-    min-height: 500px;
-    min-width: 500px;
+    min-height: 400px;
+    min-width: 400px;
 `;
 
 export const StyledParagraphContainer = styled.div`
