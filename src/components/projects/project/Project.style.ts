@@ -23,6 +23,7 @@ export const ButtonContainer = styled.button`
   border: none;
   margin: 32px 0;
   color: #2D3739;
+  cursor: pointer;
 
   :focus {
     outline: 0;
@@ -61,6 +62,5 @@ export const StyledSpan = styled.span`
   &.read-less {
     border-bottom: 6px solid #D95920;
     padding: 6px 0;
-    cursor: pointer;
   }
 `;
