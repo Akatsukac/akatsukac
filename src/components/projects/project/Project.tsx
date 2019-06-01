@@ -17,6 +17,7 @@ interface IQueryProps {
 }
 
 function toggleClasses(parent: HTMLElement) {
+  // Collapsible button: inactive has display none
   let activeElems = parent.getElementsByClassName("active");
   let inactiveElems = parent.getElementsByClassName("inactive");
   let activeElem = activeElems[0];
@@ -26,13 +27,18 @@ function toggleClasses(parent: HTMLElement) {
   inactiveElem.classList.add("active");
   inactiveElem.classList.remove("inactive");
   
-  let collapsibleContent = parent.parentElement.getElementsByClassName("collapsible-content")[0];
-  if (collapsibleContent.classList.contains("collapsed")) {
-    collapsibleContent.classList.add("visible");
-    collapsibleContent.classList.remove("collapsed");
-  } else {
-    collapsibleContent.classList.add("collapsed");
-    collapsibleContent.classList.remove("visible");
+  // Collapsible paragraphs
+  let collapsibleContentList = parent.parentElement.getElementsByClassName("collapsible-content");
+
+  for (let i = 0; i < collapsibleContentList.length; i++) {
+    let collapsibleContent = collapsibleContentList[i];
+    if (collapsibleContent.classList.contains("collapsed")) {
+      collapsibleContent.classList.add("visible");
+      collapsibleContent.classList.remove("collapsed");
+    } else {
+      collapsibleContent.classList.add("collapsed");
+      collapsibleContent.classList.remove("visible");
+    }
   }
 }
 

@@ -15,10 +15,11 @@ export const ProjectContainer = styled.div`
     padding: 0 60px;
     display: grid;
     min-height: 350px;
+    overflow: hidden;
 `;
 export const ButtonContainer = styled.button`
     position: absolute;
-    right: 50%;
+    right: 0%;
     top: 0%;
     transform-origin: 100% 0;
     transform: rotate(-90deg) translateY(-20%);
