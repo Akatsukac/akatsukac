@@ -10,7 +10,11 @@ export const StyledAboutContainer = styled.div`
   text-align: center;
   min-height: calc(100vh - 115px);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  // ie compatibility
+  @media all and (-ms-high-contrast: none) {
+    justify-content: space-around;
+  }
 `;
 
 export const LogoImg = styled(Img)`
@@ -19,7 +23,7 @@ export const LogoImg = styled(Img)`
 `;
 
 export const StyledParagraphContainer = styled.div`
-  width: 50vw;
+  width: 35%;
   margin: 0;
 `;
 
@@ -29,7 +33,7 @@ export const StyledParagraph = styled.p`
       margin: 0;
   }
   text-align: initial;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 400;
   color: #2D3739;
 `;
@@ -38,5 +42,6 @@ export const ButtonStyles = {
   'minWidth': '300px',
   'minHeight': '70px',
   'fontSize': '1.3rem',
-  'border': '7px solid #2D3739'
+  'border': '7px solid #2D3739',
+  'backgroundColor': 'initial'
 };

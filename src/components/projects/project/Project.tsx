@@ -63,12 +63,12 @@ function Project(props: IQueryProps) {
       </div>
       <CollapsibleContainer>
         <ButtonContainer className="active" onClick={(e:Event) => triggerEvent(e)}>
-          <StyledSpan>READ&nbsp;MORE</StyledSpan>
+          <StyledSpan className="read-more">READ&nbsp;MORE</StyledSpan>
           <LogoImg fluid={data.expand.childImageSharp.fluid} alt='expand'/>
         </ButtonContainer>
         <ButtonContainer className="inactive" onClick={(e:Event) => triggerEvent(e)}>
-          <StyledSpan>READ&nbsp;LESS</StyledSpan>
-          <LogoImg fluid={data.collapse.childImageSharp.fluid} alt='collapse'/>
+          <StyledSpan className="read-less">READ&nbsp;LESS</StyledSpan>
+          <LogoImg className="read-less" fluid={data.collapse.childImageSharp.fluid} alt='collapse'/>
         </ButtonContainer>
       </CollapsibleContainer>
     </ProjectContainer>
