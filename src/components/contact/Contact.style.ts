@@ -9,7 +9,7 @@ export const LogoImg = styled(Img)`
 
 export const StyledH2 = styled.h2`
   font-size: 48px;
-  font-weight: 400;
+  font-weight: 700;
   color: #2D3739;
   flex-grow: 1;
 `;

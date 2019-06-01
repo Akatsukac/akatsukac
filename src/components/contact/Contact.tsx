@@ -18,25 +18,25 @@ export default class About extends React.Component {
       render={(data) => (
         <ScrollableSection hash={'contact'}>
           <ContactContainer>
-            <StyledH2>GET IN TOUCH</StyledH2>
+            <StyledH2>Get In Touch</StyledH2>
             <ColumnsContainer>
               <ColumnContainer>
                 <a href='mailto:akatsukac@gmail.com' rel="noopener nofollower">
                   <LogoImg fluid={data.email.childImageSharp.fluid} alt='email icon'/>
                 </a>
-                <StyledH3>INQUIRE</StyledH3>
+                <StyledH3>Inquire</StyledH3>
               </ColumnContainer>
               <ColumnContainer>
                 <a href='https://www.linkedin.com/in/akatsukac/' target="__blank" rel="noopener nofollower">
                   <LogoImg fluid={data.linkedin.childImageSharp.fluid} alt='linkedin icon'/>
                 </a>
-                <StyledH3>CONNECT</StyledH3>
+                <StyledH3>Connect</StyledH3>
               </ColumnContainer>
               <ColumnContainer>
                 <a href='https://github.com/Akatsukac/akatsukac' target="__blank" rel="noopener nofollower">
                   <LogoImg fluid={data.github.childImageSharp.fluid} alt='github icon'/>
                 </a>
-                <StyledH3>EXPLORE</StyledH3>
+                <StyledH3>Explore</StyledH3>
               </ColumnContainer>
             </ColumnsContainer>
           </ContactContainer>
