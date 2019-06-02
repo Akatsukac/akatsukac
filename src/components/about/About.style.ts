@@ -7,7 +7,7 @@ export const StyledAnchor = styled.a`
 `;
 
 export const StyledAboutContainer = styled.div`
-  padding: 50px 0;
+  padding: 105px 0;
   text-align: center;
   min-height: calc(100vh - 115px);
   display: flex;
@@ -19,8 +19,8 @@ export const StyledAboutContainer = styled.div`
 `;
 
 export const LogoImg = styled(Img)`
-  height: calc(88vh - 115px);
-  width: calc(70vh - 92px);
+  height: calc(75vh - 115px);
+  width: calc(60vh - 92px);
 `;
 
 export const StyledParagraphContainer = styled.div`
