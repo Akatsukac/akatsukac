@@ -19,8 +19,8 @@ export const StyledAboutContainer = styled.div`
 `;
 
 export const LogoImg = styled(Img)`
-  height: calc(75vh - 115px);
-  width: calc(60vh - 92px);
+  height: calc(90vh - 115px);
+  width: calc(72vh - 92px);
 `;
 
 export const StyledParagraphContainer = styled.div`
