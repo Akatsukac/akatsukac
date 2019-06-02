@@ -3,7 +3,6 @@ import Img from 'gatsby-image';
 
 export const CollapsibleContainer = styled.div`
   position: relative;
-  padding: 20px;
 `;
 
 export const ProjectContainer = styled.div`
@@ -16,8 +15,8 @@ export const ButtonContainer = styled.button`
   position: absolute;
   right: 0%;
   top: 0%;
-  transform-origin: 90% 0;
-  transform: rotate(-90deg) translateY(135%);
+  transform-origin: 98% 0;
+  transform: rotate(-90deg) translateY(110%);
   display: flex;
   background: none;
   border: none;
@@ -44,13 +43,16 @@ export const ButtonContainer = styled.button`
 `;
 
 export const LogoImg = styled(Img)`
-  min-height: 55px;
-  min-width: 55px;
+  min-height: 45px;
+  min-width: 45px;
   transform: rotate(90deg);
-  margin: 0 20px 20px 20px; 
+  margin: 5px 20px 20px 20px; 
 
   &.read-less {
     border: 4px solid #D95920;
+    min-height: 63px;
+    min-width: 63px;
+    margin 2px 25px;
 
     img {
       padding: 4px;
@@ -65,6 +67,6 @@ export const StyledSpan = styled.span`
 
   &.read-less {
     border-bottom: 4px solid #D95920;
-    padding: 6px 0;
+    padding: 12px 0;
   }
 `;
