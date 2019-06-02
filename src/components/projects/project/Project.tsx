@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
-import {
-  triggerEvent
-} from './Project.service';
+import { triggerEvent } from './Project.service';
 import {
   ButtonContainer,
   CollapsibleContainer,
@@ -22,11 +20,11 @@ export default class Project extends React.Component {
             {this.props.children}
           </div>
           <CollapsibleContainer>
-            <ButtonContainer className="active" onClick={(e:Event) => triggerEvent(e)}>
+            <ButtonContainer className="active" onClick={(e:React.MouseEvent) => triggerEvent(e)}>
               <StyledSpan className="read-more">READ&nbsp;MORE</StyledSpan>
               <LogoImg fluid={data.expand.childImageSharp.fluid} alt='expand'/>
             </ButtonContainer>
-            <ButtonContainer className="inactive" onClick={(e:Event) => triggerEvent(e)}>
+            <ButtonContainer className="inactive" onClick={(e:React.MouseEvent) => triggerEvent(e)}>
               <StyledSpan className="read-less">READ&nbsp;LESS</StyledSpan>
               <LogoImg className="read-less" fluid={data.collapse.childImageSharp.fluid} alt='collapse'/>
             </ButtonContainer>

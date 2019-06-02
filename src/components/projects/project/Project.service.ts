@@ -1,5 +1,5 @@
-export function triggerEvent(e:Event) {
-  let button = e.currentTarget as HTMLElement;
+export function triggerEvent(e:React.MouseEvent) {
+  let button = e.currentTarget;
   let parent = button.parentElement;
   if (parent !== null && parent.parentElement !== null) {
     toggleClasses(parent);

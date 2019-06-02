@@ -1,10 +1,9 @@
 import * as React from 'react';
+import AppBar from '@material-ui/core/AppBar';
 import { FunctionComponent } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import { GetHeaderData } from '../../../typings/graphql';
-import AppBar from '@material-ui/core/AppBar';
 import { ScrollableLink } from 'react-update-url-on-scroll';
-
 import { 
   LogoImg,
   ToolbarContainer,
