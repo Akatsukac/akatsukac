@@ -51,7 +51,8 @@ function triggerEvent(e:Event) {
 
 function Project(props: IQueryProps) {
   const { children, data } = props;
-  if (!data || !data.expand || !data.expand.childImageSharp || !data.collapse || !data.collapse.childImageSharp) {
+  if (!data || !data.expand || !data.expand.childImageSharp 
+    || !data.collapse || !data.collapse.childImageSharp) {
     console.warn(`Header: GraphQL returned a null on build.`);
   }
   let buttonState = {};

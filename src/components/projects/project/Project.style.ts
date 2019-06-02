@@ -7,7 +7,7 @@ export const CollapsibleContainer = styled.div`
 `;
 
 export const ProjectContainer = styled.div`
-  padding: 30px 75px;
+  padding: 50px 250px 70px;
   display: flex;
   min-height: 400px;
   overflow: hidden;
@@ -17,7 +17,7 @@ export const ButtonContainer = styled.button`
   right: 0%;
   top: 0%;
   transform-origin: 90% 0;
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) translateY(135%);
   display: flex;
   background: none;
   border: none;
@@ -50,7 +50,11 @@ export const LogoImg = styled(Img)`
   margin: 0 20px 20px 20px; 
 
   &.read-less {
-    border: 6px solid #D95920;
+    border: 4px solid #D95920;
+
+    img {
+      padding: 4px;
+    }
   }
 `;
 
@@ -60,7 +64,7 @@ export const StyledSpan = styled.span`
   padding: 10px 0;
 
   &.read-less {
-    border-bottom: 6px solid #D95920;
+    border-bottom: 4px solid #D95920;
     padding: 6px 0;
   }
 `;
