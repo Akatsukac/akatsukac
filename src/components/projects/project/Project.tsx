@@ -3,10 +3,10 @@ import { FunctionComponent } from "react";
 import { graphql, StaticQuery } from 'gatsby';
 import { GetProjectData } from '../../../typings/graphql';
 import {
-  ProjectContainer,
-  CollapsibleContainer,
   ButtonContainer,
+  CollapsibleContainer,
   LogoImg,
+  ProjectContainer,
   StyledSpan
 } from './Project.style';
 
@@ -27,6 +27,10 @@ function toggleClasses(parent: HTMLElement) {
   inactiveElem.classList.remove("inactive");
   
   // Collapsible paragraphs
+  if (parent.parentElement === null) {
+    return;
+  }
+  
   let collapsibleContentList = parent.parentElement.getElementsByClassName("collapsible-content");
 
   for (let i = 0; i < collapsibleContentList.length; i++) {
@@ -55,8 +59,7 @@ function Project(props: IQueryProps) {
     || !data.collapse || !data.collapse.childImageSharp) {
     console.warn(`Header: GraphQL returned a null on build.`);
   }
-  let buttonState = {};
-  
+    
   return (
     <ProjectContainer className="project">
       <div>

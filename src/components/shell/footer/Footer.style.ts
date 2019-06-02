@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import constants from '../../../styling/constants';
 
 export const FooterContainer = styled.div`
     line-height: 60px;
@@ -10,5 +11,5 @@ export const CopyrightSpan = styled.span`
     margin: auto 0;
     color: white;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-size: 0.875rem;
+    font-size: ${constants.typography.fontSize.xs};
 `;

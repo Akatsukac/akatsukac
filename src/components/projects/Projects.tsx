@@ -2,10 +2,10 @@ import * as React from 'react';
 import Project from './project/Project';
 import ScrollableSection from 'react-update-url-on-scroll';
 import {
-  StyledProjectHeader,
   StyledParagraph,
+  StyledProjectHeader,
   StyledProjectsContainer,
-  StyledSubsection
+  StyledProjectSubheader
 } from './Projects.style';
 
 export default class Projects extends React.Component {
@@ -17,16 +17,16 @@ export default class Projects extends React.Component {
             <StyledProjectHeader>
               Breaking Up The Monolith
             </StyledProjectHeader>
-            <StyledSubsection>
+            <StyledProjectSubheader>
               Summary
-            </StyledSubsection>
+            </StyledProjectSubheader>
             <StyledParagraph>
               As software lead, I worked with four software engineers to build towards a micro frontend
               target state that reduced deployment times from six hours to 20 minutes.
             </StyledParagraph>
-            <StyledSubsection className="collapsible-content collapsed">
+            <StyledProjectSubheader className="collapsible-content collapsed">
               Technical Details
-            </StyledSubsection>
+            </StyledProjectSubheader>
             <StyledParagraph className="collapsible-content collapsed">
               At Capital One, we have a web application called "Dealer Navigator" that allows auto dealers
               to finance their customers' auto loans. The document upload section, one of the core services offered,
@@ -53,17 +53,17 @@ export default class Projects extends React.Component {
             <StyledProjectHeader>
               Reimagining The Customer Experience
             </StyledProjectHeader>
-            <StyledSubsection>
+            <StyledProjectSubheader>
               Summary
-            </StyledSubsection>
+            </StyledProjectSubheader>
             <StyledParagraph>
               I rebuilt a business-critical Angular web app with loan funding requirements, document classification,
               and a PDFJS document previewer, resulting in a 15% increase in dealerships leveraging the web app over
               mail and fax.
             </StyledParagraph>
-            <StyledSubsection className="collapsible-content collapsed">
+            <StyledProjectSubheader className="collapsible-content collapsed">
               Technical Details
-            </StyledSubsection>
+            </StyledProjectSubheader>
             <StyledParagraph className="collapsible-content collapsed">
               I integrated NGRX for maintaining component state across different pages, built collapsible banners 
               for previewing uploaded documents, and tables to clearly communicate dealer funding 
@@ -79,16 +79,16 @@ export default class Projects extends React.Component {
             <StyledProjectHeader>
               Clearing Up The Confusion
             </StyledProjectHeader>
-            <StyledSubsection>
+            <StyledProjectSubheader>
               Summary
-            </StyledSubsection>
+            </StyledProjectSubheader>
             <StyledParagraph>
               I architected and developed a Java Spring Boot REST API that provides application specific
               funding requirements, reducing the number of applications with missing documents by 55%.
             </StyledParagraph>
-            <StyledSubsection className="collapsible-content collapsed">
+            <StyledProjectSubheader className="collapsible-content collapsed">
               Technical Details
-            </StyledSubsection>
+            </StyledProjectSubheader>
             <StyledParagraph className="collapsible-content collapsed">
               I leveraged the Builder design pattern to program business logic into readable and maintainable classes.
               This allowed me to modularize the logic for including universal requirements, special requirements due to 
@@ -103,17 +103,17 @@ export default class Projects extends React.Component {
             <StyledProjectHeader>
               Building A Document Classification/Extraction Pipeline
             </StyledProjectHeader>
-            <StyledSubsection>
+            <StyledProjectSubheader>
               Summary
-            </StyledSubsection>
+            </StyledProjectSubheader>
             <StyledParagraph>
               I replaced a manual document classification process with an event-driven Python microservice
               pipeline on Amazon Web Services that classifies 1 million documents per day in less than 10 
               seconds per page, saving $6 million annually.
             </StyledParagraph>
-            <StyledSubsection className="collapsible-content collapsed">
+            <StyledProjectSubheader className="collapsible-content collapsed">
               Technical Details
-            </StyledSubsection>
+            </StyledProjectSubheader>
             <StyledParagraph className="collapsible-content collapsed">
               For the pipeline, I built an image preprocessing Python microservice. The dockerized image 
               preprocessing tool leveraged OpenCV to grayscale images, convert files to jpeg, and perform 

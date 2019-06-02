@@ -1,26 +1,9 @@
 import styled from 'styled-components';
-
-export const StyledProjectHeader = styled.h2`
-  font-size: 48px;
-  font-weight: 700;
-`;
-
-export const StyledSubsection = styled.h4`
-  font-size: 32px;
-  font-weight: 700;
-
-  &.collapsed {
-    display: none;
-  }
-
-  &.visible {
-    display: block;
-  }
-`;
+import constants from '../../styling/constants';
 
 export const StyledParagraph = styled.p`
-  font-size: 28px;
-  font-weight: 400;
+  font-size: calc(${constants.typography.fontSize.md} - 4px);
+  font-weight: ${constants.typography.fontWeight.normal};
 
   &.collapsed {
     display: none;
@@ -30,14 +13,33 @@ export const StyledParagraph = styled.p`
     display: block;
   }
 `;
+
+export const StyledProjectHeader = styled.h2`
+  font-size: ${constants.typography.fontSize.lg};
+  font-weight: ${constants.typography.fontWeight.bold};
+`;
+
 
 export const StyledProjectsContainer = styled.div`
   .project:nth-child(even) {
-    background-color: #2D3739;
-    color: white;
+    background-color: ${constants.colors.black};
+    color: ${constants.colors.white};
 
     .active {
-      color: white;
+      color: ${constants.colors.white};
     }
+  }
+`;
+
+export const StyledProjectSubheader = styled.h4`
+  font-size: ${constants.typography.fontSize.md};
+  font-weight: ${constants.typography.fontWeight.bold};
+
+  &.collapsed {
+    display: none;
+  }
+
+  &.visible {
+    display: block;
   }
 `;

@@ -1,16 +1,6 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 
-export const CollapsibleContainer = styled.div`
-  position: relative;
-`;
-
-export const ProjectContainer = styled.div`
-  padding: 50px 250px 70px;
-  display: flex;
-  min-height: 400px;
-  overflow: hidden;
-`;
 export const ButtonContainer = styled.button`
   position: absolute;
   right: 0%;
@@ -42,6 +32,10 @@ export const ButtonContainer = styled.button`
   }
 `;
 
+export const CollapsibleContainer = styled.div`
+  position: relative;
+`;
+
 export const LogoImg = styled(Img)`
   min-height: 45px;
   min-width: 45px;
@@ -58,6 +52,13 @@ export const LogoImg = styled(Img)`
       padding: 4px;
     }
   }
+`;
+
+export const ProjectContainer = styled.div`
+  padding: 50px 250px 70px;
+  display: flex;
+  min-height: 400px;
+  overflow: hidden;
 `;
 
 export const StyledSpan = styled.span`

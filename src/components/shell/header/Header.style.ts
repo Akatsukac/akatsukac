@@ -1,6 +1,7 @@
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import Toolbar from '@material-ui/core/Toolbar';
+import constants from '../../../styling/constants';
 
 export const LogoImg = styled(Img)`
   min-height: 55px;
@@ -38,7 +39,7 @@ export const LinkContainer = styled.div`
 export const StyledSectionAnchor = styled.a`
   text-decoration: none;
   color: white;
-  font-size: 18px;
+  font-size: ${constants.typography.fontSize.sm};
   font-weight: 700;
 
   :hover, &.selected {
