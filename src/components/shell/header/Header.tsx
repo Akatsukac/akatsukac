@@ -1,72 +1,58 @@
 import * as React from 'react';
-import { FunctionComponent } from 'react';
-import { graphql, StaticQuery } from 'gatsby';
-import { GetHeaderData } from '../../../typings/graphql';
 import AppBar from '@material-ui/core/AppBar';
+import { graphql, StaticQuery } from 'gatsby';
 import { ScrollableLink } from 'react-update-url-on-scroll';
-
 import { 
-  LogoImg,
-  ToolbarContainer,
   AppBarStylings,
-  StyledSectionAnchor,
+  HeaderContainer,
   LinkContainer,
   LinksContainer,
-  StyledLogoAnchor
+  LogoIcon,
+  StyledLogoAnchor,
+  StyledSectionAnchor
 } from './Header.style';
 
-interface IQueryProps {
-  data: GetHeaderData.Query
-}
-
-function Header(props: IQueryProps) {
-  const { data } = props;
-  if (!data || !data.logo || !data.logo.childImageSharp) {
-    console.warn(`Header: GraphQL returned a null on build.`);
-  }
-  return (
-    <AppBar position="fixed" style={AppBarStylings}>
-      <ToolbarContainer>
-        <ScrollableLink href='#home'>
-          <StyledLogoAnchor>
-            <LogoImg fluid={data.logo.childImageSharp.fluid} alt='akatsukac logo'/>
-          </StyledLogoAnchor>
-        </ScrollableLink>
-        <LinksContainer>
-        <LinkContainer>
+export default class Header extends React.Component {
+  render() {
+    return (
+      <StaticQuery 
+      query={HEADER_QUERY}
+      render={(data) => (
+        <AppBar position="fixed" style={AppBarStylings}>
+          <HeaderContainer>
             <ScrollableLink href='#home'>
-              <StyledSectionAnchor className="section-anchor selected" id="home">HOME</StyledSectionAnchor>
+              <StyledLogoAnchor>
+                <LogoIcon fluid={data.logo.childImageSharp.fluid} alt='akatsukac logo'/>
+              </StyledLogoAnchor>
             </ScrollableLink>
-          </LinkContainer>          
-          <LinkContainer>
-            <ScrollableLink href='#projects'>
-              <StyledSectionAnchor className="section-anchor" id="projects">PROJECTS</StyledSectionAnchor>
-            </ScrollableLink>
-          </LinkContainer>
-          <LinkContainer>
-            <ScrollableLink href='#about'>
-              <StyledSectionAnchor className="section-anchor" id="about">ABOUT</StyledSectionAnchor>
-            </ScrollableLink>
-          </LinkContainer>
-          <LinkContainer>
-            <ScrollableLink href='#contact'>
-              <StyledSectionAnchor className="section-anchor" id="contact">CONTACT</StyledSectionAnchor>
-            </ScrollableLink>
-          </LinkContainer>
-        </LinksContainer>
-      </ToolbarContainer>
-    </AppBar>
-  );
-}
-
-const container: FunctionComponent = props => (
-  <StaticQuery
-    query={HEADER_QUERY}
-    render={data => <Header data={data} {...props}/>}
-  />
-);
-
-export default container;
+            <LinksContainer>
+            <LinkContainer>
+                <ScrollableLink href='#home'>
+                  <StyledSectionAnchor className="section-anchor selected" id="home">HOME</StyledSectionAnchor>
+                </ScrollableLink>
+              </LinkContainer>          
+              <LinkContainer>
+                <ScrollableLink href='#projects'>
+                  <StyledSectionAnchor className="section-anchor" id="projects">PROJECTS</StyledSectionAnchor>
+                </ScrollableLink>
+              </LinkContainer>
+              <LinkContainer>
+                <ScrollableLink href='#about'>
+                  <StyledSectionAnchor className="section-anchor" id="about">ABOUT</StyledSectionAnchor>
+                </ScrollableLink>
+              </LinkContainer>
+              <LinkContainer>
+                <ScrollableLink href='#contact'>
+                  <StyledSectionAnchor className="section-anchor" id="contact">CONTACT</StyledSectionAnchor>
+                </ScrollableLink>
+              </LinkContainer>
+            </LinksContainer>
+          </HeaderContainer>
+        </AppBar>
+      )}></StaticQuery>
+      );
+    }
+  }
 
 const HEADER_QUERY = graphql`
     query GetHeaderData {

@@ -1,26 +1,25 @@
+import constants from '../../styling/constants';
 import styled from 'styled-components';
 
-export const StyledProjectHeader = styled.h2`
-  font-size: 48px;
-  font-weight: 700;
+export const ProjectsContainer = styled.div`
+  .project:nth-child(even) {
+    background-color: ${constants.colors.black};
+    color: ${constants.colors.white};
+
+    .active {
+      color: ${constants.colors.white};
+    }
+  }
 `;
 
-export const StyledSubsection = styled.h4`
-  font-size: 32px;
-  font-weight: 700;
-
-  &.collapsed {
-    display: none;
-  }
-
-  &.visible {
-    display: block;
-  }
+export const StyledHeader = styled.h2`
+  font-size: ${constants.typography.fontSize.lg};
+  font-weight: ${constants.typography.fontWeight.bold};
 `;
 
 export const StyledParagraph = styled.p`
-  font-size: 28px;
-  font-weight: 400;
+  font-size: calc(${constants.typography.fontSize.md} - 4px);
+  font-weight: ${constants.typography.fontWeight.normal};
 
   &.collapsed {
     display: none;
@@ -31,13 +30,15 @@ export const StyledParagraph = styled.p`
   }
 `;
 
-export const StyledProjectsContainer = styled.div`
-  .project:nth-child(even) {
-    background-color: #2D3739;
-    color: white;
+export const StyledSubheader = styled.h4`
+  font-size: ${constants.typography.fontSize.md};
+  font-weight: ${constants.typography.fontWeight.bold};
 
-    .active {
-      color: white;
-    }
+  &.collapsed {
+    display: none;
+  }
+
+  &.visible {
+    display: block;
   }
 `;

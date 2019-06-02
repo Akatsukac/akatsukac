@@ -1,16 +1,7 @@
-import styled from 'styled-components';
+import constants from '../../../styling/constants';
 import Img from 'gatsby-image';
+import styled from 'styled-components';
 
-export const CollapsibleContainer = styled.div`
-  position: relative;
-`;
-
-export const ProjectContainer = styled.div`
-  padding: 50px 250px 70px;
-  display: flex;
-  min-height: 400px;
-  overflow: hidden;
-`;
 export const ButtonContainer = styled.button`
   position: absolute;
   right: 0%;
@@ -21,7 +12,7 @@ export const ButtonContainer = styled.button`
   background: none;
   border: none;
   margin: 32px 0;
-  color: #2D3739;
+  color: ${constants.colors.black};
   cursor: pointer;
 
   :focus {
@@ -42,14 +33,36 @@ export const ButtonContainer = styled.button`
   }
 `;
 
-export const LogoImg = styled(Img)`
+export const CollapsibleContainer = styled.div`
+  position: relative;
+`;
+
+export const ProjectContainer = styled.div`
+  padding: 50px 250px 70px;
+  display: flex;
+  min-height: 400px;
+  overflow: hidden;
+`;
+
+export const StyledSpan = styled.span`
+  font-size: ${constants.typography.fontSize.md};
+  font-weight: ${constants.typography.fontWeight.bold};
+  padding: 10px 0;
+
+  &.read-less {
+    border-bottom: 4px solid ${constants.colors.orange};
+    padding: 12px 0;
+  }
+`;
+
+export const ToggleIcon = styled(Img)`
   min-height: 45px;
   min-width: 45px;
   transform: rotate(90deg);
   margin: 5px 20px 20px 20px; 
 
   &.read-less {
-    border: 4px solid #D95920;
+    border: 4px solid ${constants.colors.orange};
     min-height: 63px;
     min-width: 63px;
     margin 2px 25px;
@@ -57,16 +70,5 @@ export const LogoImg = styled(Img)`
     img {
       padding: 4px;
     }
-  }
-`;
-
-export const StyledSpan = styled.span`
-  font-size: 32px;
-  font-weight: 700;
-  padding: 10px 0;
-
-  &.read-less {
-    border-bottom: 4px solid #D95920;
-    padding: 12px 0;
   }
 `;

@@ -2,12 +2,11 @@ import * as React from 'react';
 import ScrollableSection from 'react-update-url-on-scroll';
 import { graphql, StaticQuery } from 'gatsby';
 import { 
-  LogoImg,
-  ContactContainer,
-  ColumnContainer,
   ColumnsContainer,
-  StyledH2,
-  StyledH3
+  ContactContainer,
+  ContactIcon,
+  StyledColumnHeader,
+  StyledHeader
 } from './Contact.style';
 
 export default class About extends React.Component {
@@ -18,26 +17,26 @@ export default class About extends React.Component {
       render={(data) => (
         <ScrollableSection hash={'contact'}>
           <ContactContainer>
-            <StyledH2>Get In Touch</StyledH2>
+            <StyledHeader>Get In Touch</StyledHeader>
             <ColumnsContainer>
-              <ColumnContainer>
+              <div>
                 <a href='mailto:akatsukac@gmail.com' rel="noopener nofollower">
-                  <LogoImg fluid={data.email.childImageSharp.fluid} alt='email icon'/>
+                  <ContactIcon fluid={data.email.childImageSharp.fluid} alt='email icon'/>
                 </a>
-                <StyledH3>Inquire</StyledH3>
-              </ColumnContainer>
-              <ColumnContainer>
+                <StyledColumnHeader>Inquire</StyledColumnHeader>
+              </div>
+              <div>
                 <a href='https://www.linkedin.com/in/akatsukac/' target="__blank" rel="noopener nofollower">
-                  <LogoImg fluid={data.linkedin.childImageSharp.fluid} alt='linkedin icon'/>
+                  <ContactIcon fluid={data.linkedin.childImageSharp.fluid} alt='linkedin icon'/>
                 </a>
-                <StyledH3>Connect</StyledH3>
-              </ColumnContainer>
-              <ColumnContainer>
+                <StyledColumnHeader>Connect</StyledColumnHeader>
+              </div>
+              <div>
                 <a href='https://github.com/Akatsukac/akatsukac' target="__blank" rel="noopener nofollower">
-                  <LogoImg fluid={data.github.childImageSharp.fluid} alt='github icon'/>
+                  <ContactIcon fluid={data.github.childImageSharp.fluid} alt='github icon'/>
                 </a>
-                <StyledH3>Explore</StyledH3>
-              </ColumnContainer>
+                <StyledColumnHeader>Explore</StyledColumnHeader>
+              </div>
             </ColumnsContainer>
           </ContactContainer>
         </ScrollableSection>

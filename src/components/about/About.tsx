@@ -3,11 +3,11 @@ import Button from '@material-ui/core/Button';
 import ScrollableSection from 'react-update-url-on-scroll';
 import { graphql, StaticQuery } from 'gatsby';
 import {
-  ButtonStyles,
-  LogoImg,
-  StyledAboutContainer,
+  AboutContainer,
+  ParagraphsContainer,
+  Portrait,
+  ResumeButtonStyles,
   StyledAnchor,
-  StyledParagraphContainer,
   StyledParagraph
 } from './About.style';
 
@@ -15,12 +15,12 @@ export default class About extends React.Component {
   render() {
     return (
       <StaticQuery 
-      query={PROJECT_QUERY}
+      query={ABOUT_QUERY}
       render={(data) => (
       <ScrollableSection hash={'about'}>
-        <StyledAboutContainer> 
-          <LogoImg fluid={data.about.childImageSharp.fluid} alt='about'/>
-          <StyledParagraphContainer>
+        <AboutContainer> 
+          <Portrait fluid={data.about.childImageSharp.fluid} alt='about'/>
+          <ParagraphsContainer>
             <StyledParagraph>                
               My name is Christopher Akatsuka. I graduated from
               the University of Pennsylvania with a BSE and MSE in Computer and Information Science. 
@@ -37,19 +37,19 @@ export default class About extends React.Component {
               surpassed 250 Funko pops in my collection.
             </StyledParagraph>
             <StyledAnchor href="https://github.com/Akatsukac/akatsukac/raw/master/src/assets/docs/Final-Akatsuka-Resume.pdf" download>
-              <Button variant="outlined" size="large" style={ButtonStyles}>
+              <Button variant="outlined" size="large" style={ResumeButtonStyles}>
                 DOWNLOAD RESUME
               </Button>
             </StyledAnchor>
-          </StyledParagraphContainer>
-        </StyledAboutContainer>
+          </ParagraphsContainer>
+        </AboutContainer>
       </ScrollableSection>
       )}></StaticQuery>
     );
   }
 }
 
-const PROJECT_QUERY = graphql`
+const ABOUT_QUERY = graphql`
     query GetAboutData {
       about: file(relativePath: {eq: "images/headshot.jpg"}) {
         childImageSharp {

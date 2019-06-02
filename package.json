@@ -28,7 +28,6 @@
     "react-helmet": "^5.2.0",
     "react-update-url-on-scroll": "github:akatsukac/react-update-url-on-scroll",
     "styled-components": "^4.2.0",
-    "typeface-roboto": "0.0.54",
     "typescript": "^3.4.5"
   },
   "devDependencies": {
