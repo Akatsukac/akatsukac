@@ -21,11 +21,12 @@ export const StyledH3 = styled.h3`
 `;
 
 export const ContactContainer = styled.div`
-    width: 100%;
-    text-align: center;
-    min-height: calc(100vh - 60px - 115px);
-    display: flex;
-    flex-direction: column;
+  padding: 60px 0;
+  width: 100%;
+  text-align: center;
+  min-height: calc(100vh - 60px - 115px);
+  display: flex;
+  flex-direction: column;
 `;
 
 export const ColumnContainer = styled.div`
@@ -36,5 +37,5 @@ export const ColumnsContainer = styled.div`
   width: 100%;
   justify-content: space-around;
   padding: 30px 0;
-  flex-grow: 2;
+  flex-grow: 1;
 `;
