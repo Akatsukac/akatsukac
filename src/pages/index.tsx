@@ -5,7 +5,7 @@ import About from "../components/about/About";
 import Projects from "../components/projects/Projects";
 import Shell from "../components/shell/Shell";
 import Contact from "../components/contact/Contact";
-import SEO from "../components/utilities/seo";
+import SEO from "../utilities/seo";
 
 const IndexPage: FunctionComponent = () => (
   <Shell>
