@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import constants from '../../styling/constants';
 
 export const StyledAnchor = styled.a`
   text-decoration: none;

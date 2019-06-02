@@ -1,15 +1,14 @@
 import * as React from 'react';
+import Button from '@material-ui/core/Button';
 import ScrollableSection from 'react-update-url-on-scroll';
 import { graphql, StaticQuery } from 'gatsby';
-import Button from '@material-ui/core/Button';
 import {
-  StyledAboutContainer,
-  LogoImg,
-  StyledParagraphContainer,
-  StyledParagraph,
-  StyledContentContainer,
   ButtonStyles,
-  StyledAnchor
+  LogoImg,
+  StyledAboutContainer,
+  StyledAnchor,
+  StyledParagraphContainer,
+  StyledParagraph
 } from './About.style';
 
 export default class About extends React.Component {
