@@ -43,6 +43,5 @@ export const ButtonStyles = {
   'minHeight': '70px',
   'fontSize': '1.3rem',
   'border': '7px solid #2D3739',
-  'borderRadius': '0',
-  'backgroundColor': 'initial'
+  'borderRadius': '0'
 };
