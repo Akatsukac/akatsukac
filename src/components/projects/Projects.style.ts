@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import constants from '../../styling/constants';
+import styled from 'styled-components';
 
 export const ProjectsContainer = styled.div`
   .project:nth-child(even) {

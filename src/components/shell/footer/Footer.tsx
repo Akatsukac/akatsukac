@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { FunctionComponent } from "react";
 import { 
-  FooterContainer, 
   CopyrightSpan,
+  FooterContainer 
 } from './Footer.style';
 
 const Footer: FunctionComponent = () => (
@@ -14,4 +14,3 @@ const Footer: FunctionComponent = () => (
 )
 
 export default Footer;
-

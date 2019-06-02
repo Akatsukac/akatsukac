@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
+import constants from './src/styling/constants';
 import { configureAnchors } from 'react-update-url-on-scroll';
 import { TransAppBarStylings } from './src/components/shell/header/Header.style';
 import './src/global.css';
@@ -15,10 +16,9 @@ export const onClientEntry = () => {
       import(`intersection-observer`);
       console.log(`# IntersectionObserver is polyfilled!`);
     }
-
     // Scrolling event triggers and config settings
     configureAnchors(
-      { offset: 115,
+      { offset: constants.header.heightNum,
         onSectionEnter: (newState, oldState) => {
         if (typeof newState !== 'undefined') {
           // Modify header based on section
@@ -26,7 +26,7 @@ export const onClientEntry = () => {
           if (header.length === 0) 
             return; 
           if (newState['hash'] !== 'home') {
-            header[0].setAttribute('style', 'background-color: #2D3739; transition: all 0.25s ease-in;');
+            header[0].setAttribute('style', 'transition: all 0.25s ease-in; background-color: ' + constants.colors.black + ';');
           } else {
             header[0].setAttribute('style', TransAppBarStylings);
           }

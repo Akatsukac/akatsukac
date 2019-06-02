@@ -1,11 +1,9 @@
 const constants = {
     'colors': {
-      // Blue Black
       'black': '#2D3739',
-      // Orange
       'orange': '#D95920',
-      // White
-      'white': 'white'
+      'white': 'white',
+      'transparent': 'rgba(0,0,0,0.0)'
     },
     'typography': {
       'fontWeight': {
@@ -22,7 +20,8 @@ const constants = {
       }
     },
     'header': {
-      'height': '115px'
+      'height': '115px',
+      'heightNum': 115
     },
     'footer': {
       'height': '60px'

@@ -4,9 +4,9 @@ import { triggerEvent } from './Project.service';
 import {
   ButtonContainer,
   CollapsibleContainer,
-  LogoImg,
   ProjectContainer,
-  StyledSpan
+  StyledSpan,
+  ToggleIcon
 } from './Project.style';
 
 export default class Project extends React.Component {
@@ -22,11 +22,11 @@ export default class Project extends React.Component {
           <CollapsibleContainer>
             <ButtonContainer className="active" onClick={(e:React.MouseEvent) => triggerEvent(e)}>
               <StyledSpan className="read-more">READ&nbsp;MORE</StyledSpan>
-              <LogoImg fluid={data.expand.childImageSharp.fluid} alt='expand'/>
+              <ToggleIcon fluid={data.expand.childImageSharp.fluid} alt='expand'/>
             </ButtonContainer>
             <ButtonContainer className="inactive" onClick={(e:React.MouseEvent) => triggerEvent(e)}>
               <StyledSpan className="read-less">READ&nbsp;LESS</StyledSpan>
-              <LogoImg className="read-less" fluid={data.collapse.childImageSharp.fluid} alt='collapse'/>
+              <ToggleIcon className="read-less" fluid={data.collapse.childImageSharp.fluid} alt='collapse'/>
             </ButtonContainer>
           </CollapsibleContainer>
         </ProjectContainer>
