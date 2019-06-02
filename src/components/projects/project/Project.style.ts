@@ -51,6 +51,10 @@ export const LogoImg = styled(Img)`
 
   &.read-less {
     border: 4px solid #D95920;
+
+    img {
+      padding: 4px;
+    }
   }
 `;
 
