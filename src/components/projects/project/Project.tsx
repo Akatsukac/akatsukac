@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { FunctionComponent } from "react";
 import { graphql, StaticQuery } from 'gatsby';
-import { GetProjectData } from '../../../typings/graphql';
 import {
   ButtonContainer,
   CollapsibleContainer,
@@ -9,11 +7,6 @@ import {
   ProjectContainer,
   StyledSpan
 } from './Project.style';
-
-interface IQueryProps {
-  children: [],
-  data: GetProjectData.Query
-}
 
 function toggleClasses(parent: HTMLElement) {
   // Collapsible button: inactive has display none
@@ -30,7 +23,7 @@ function toggleClasses(parent: HTMLElement) {
   if (parent.parentElement === null) {
     return;
   }
-  
+
   let collapsibleContentList = parent.parentElement.getElementsByClassName("collapsible-content");
 
   for (let i = 0; i < collapsibleContentList.length; i++) {
@@ -53,40 +46,31 @@ function triggerEvent(e:Event) {
   }
 }
 
-function Project(props: IQueryProps) {
-  const { children, data } = props;
-  if (!data || !data.expand || !data.expand.childImageSharp 
-    || !data.collapse || !data.collapse.childImageSharp) {
-    console.warn(`Header: GraphQL returned a null on build.`);
+export default class Project extends React.Component {
+  render() {
+    return (
+      <StaticQuery 
+      query={PROJECT_QUERY}
+      render={(data) => (
+        <ProjectContainer className="project">
+          <div>
+            {this.props.children}
+          </div>
+          <CollapsibleContainer>
+            <ButtonContainer className="active" onClick={(e:Event) => triggerEvent(e)}>
+              <StyledSpan className="read-more">READ&nbsp;MORE</StyledSpan>
+              <LogoImg fluid={data.expand.childImageSharp.fluid} alt='expand'/>
+            </ButtonContainer>
+            <ButtonContainer className="inactive" onClick={(e:Event) => triggerEvent(e)}>
+              <StyledSpan className="read-less">READ&nbsp;LESS</StyledSpan>
+              <LogoImg className="read-less" fluid={data.collapse.childImageSharp.fluid} alt='collapse'/>
+            </ButtonContainer>
+          </CollapsibleContainer>
+        </ProjectContainer>
+      )}></StaticQuery>
+    );
   }
-    
-  return (
-    <ProjectContainer className="project">
-      <div>
-        {children}
-      </div>
-      <CollapsibleContainer>
-        <ButtonContainer className="active" onClick={(e:Event) => triggerEvent(e)}>
-          <StyledSpan className="read-more">READ&nbsp;MORE</StyledSpan>
-          <LogoImg fluid={data.expand.childImageSharp.fluid} alt='expand'/>
-        </ButtonContainer>
-        <ButtonContainer className="inactive" onClick={(e:Event) => triggerEvent(e)}>
-          <StyledSpan className="read-less">READ&nbsp;LESS</StyledSpan>
-          <LogoImg className="read-less" fluid={data.collapse.childImageSharp.fluid} alt='collapse'/>
-        </ButtonContainer>
-      </CollapsibleContainer>
-    </ProjectContainer>
-  );
-};
-
-const container: FunctionComponent = (props) => (
-  <StaticQuery
-    query={PROJECT_QUERY}
-    render={data => <Project data={data} {...props}/>}
-  />
-);
-
-export default container;
+}
 
 const PROJECT_QUERY = graphql`
     query GetProjectData {
