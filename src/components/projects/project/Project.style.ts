@@ -33,6 +33,10 @@ export const ButtonContainer = styled.button`
   }
 `;
 
+export const ChildrenContainer = styled.div`
+  min-width: 100%;
+`;
+
 export const CollapsibleContainer = styled.div`
   position: relative;
 `;

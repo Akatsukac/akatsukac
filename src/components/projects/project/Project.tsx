@@ -3,6 +3,7 @@ import { graphql, StaticQuery } from 'gatsby';
 import { triggerEvent } from './Project.service';
 import {
   ButtonContainer,
+  ChildrenContainer,
   CollapsibleContainer,
   ProjectContainer,
   StyledSpan,
@@ -16,9 +17,9 @@ export default class Project extends React.Component {
       query={PROJECT_QUERY}
       render={(data) => (
         <ProjectContainer className="project">
-          <div>
+          <ChildrenContainer>
             {this.props.children}
-          </div>
+          </ChildrenContainer>
           <CollapsibleContainer>
             <ButtonContainer className="active" onClick={(e:React.MouseEvent) => triggerEvent(e)}>
               <StyledSpan className="read-more">READ&nbsp;MORE</StyledSpan>
