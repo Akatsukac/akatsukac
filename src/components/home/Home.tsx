@@ -19,7 +19,7 @@ export default class Home extends React.Component {
           <BackgroundImage style={BackgroundImageStyles} fluid={data.background.childImageSharp.fluid}>
             <WelcomeContainer>
               <StyledHeader>CHRISTOPHER&nbsp;AKATSUKA</StyledHeader>
-              <StyledSubheader>SOFTWARE&nbsp;ENGINEER</StyledSubheader>
+              <StyledSubheader>Full&nbsp;Stack&nbsp;Developer</StyledSubheader>
             </WelcomeContainer>
           </BackgroundImage>
         </ScrollableSection>

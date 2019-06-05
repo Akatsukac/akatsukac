@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Christopher Akatsuka Personal Site`,
-    description: `Powered by React`,
+    title: `Christopher Akatsuka's Personal Site`,
+    description: `Christopher Akatsuka's personal site powered 
+    by React with the Gatsby framework`,
     siteUrl: `https://www.akatsukac.com`,
     author: `Christopher Akatsuka`
   },
