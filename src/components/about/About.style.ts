@@ -1,6 +1,7 @@
 import constants from '../../styling/constants';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import { media } from '../../styling/core';
 
 export const AboutContainer = styled.div`
   padding: 105px 0;
@@ -20,8 +21,8 @@ export const ParagraphsContainer = styled.div`
 `;
 
 export const Portrait = styled(Img)`
-  height: calc(90vh - ${constants.header.height});
-  width: calc(72vh - 92px);
+  height: 25%;
+  width: 25%;
 `;
 
 export const ResumeButtonStyles = {
@@ -36,13 +37,31 @@ export const StyledAnchor = styled.a`
   text-decoration: none;
 `;
 
+export const StyledHeader = styled.h2`
+  font-weight: ${constants.typography.fontWeight.bold};
+  font-size: ${constants.typography.fontSize.lg};
+  text-align: left;
+  margin: 0;
+`;
+
 export const StyledParagraph = styled.p`
   &:first-child, &:last-child {
       margin: 0;
   }
-
-  text-align: left;
   font-size: calc(${constants.typography.fontSize.md} - 4px);
+  text-align: left;
   font-weight: ${constants.typography.fontWeight.normal};
   color: ${constants.colors.black};
+
+  ${media(constants.breakpoints.desktop)`
+    font-size: calc();
+  `};
+
+  ${media(constants.breakpoints.tablet)`
+    font-size: calc()
+  `};
+
+  ${media(constants.breakpoints.mobile)`
+    font-size: calc()
+  `};
 `;

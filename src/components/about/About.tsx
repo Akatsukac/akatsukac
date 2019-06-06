@@ -8,6 +8,7 @@ import {
   Portrait,
   ResumeButtonStyles,
   StyledAnchor,
+  StyledHeader,
   StyledParagraph
 } from './About.style';
 
@@ -21,9 +22,12 @@ export default class About extends React.Component {
         <AboutContainer> 
           <Portrait fluid={data.about.childImageSharp.fluid} alt='about'/>
           <ParagraphsContainer>
+            <StyledHeader>
+              Aloha! 
+            </StyledHeader>
             <StyledParagraph>                
-              My name is Christopher Akatsuka. I graduated from the University of Pennsylvania with a 
-              BSE and MSE in Computer and Information Science. I am currently a Senior Associate 
+              My name is Christopher Akatsuka. I grew up in Hawaii and graduated from the University of Pennsylvania 
+              with a BSE and MSE in Computer and Information Science. I am currently a Senior Associate 
               Software Engineer at Capital One in Plano, Texas where I work on full stack projects.
             </StyledParagraph>
             <StyledParagraph>

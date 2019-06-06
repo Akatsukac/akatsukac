@@ -30,17 +30,17 @@ export default class Header extends React.Component {
                 <ScrollableLink href='#home'>
                   <StyledSectionAnchor className="section-anchor selected" id="home">HOME</StyledSectionAnchor>
                 </ScrollableLink>
-              </LinkContainer>        
-              <LinkContainer>
-                <ScrollableLink href='#about'>
-                  <StyledSectionAnchor className="section-anchor" id="about">ABOUT</StyledSectionAnchor>
-                </ScrollableLink>
-              </LinkContainer>  
+              </LinkContainer>         
               <LinkContainer>
                 <ScrollableLink href='#projects'>
                   <StyledSectionAnchor className="section-anchor" id="projects">PROJECTS</StyledSectionAnchor>
                 </ScrollableLink>
               </LinkContainer>
+              <LinkContainer>
+                <ScrollableLink href='#about'>
+                  <StyledSectionAnchor className="section-anchor" id="about">ABOUT</StyledSectionAnchor>
+                </ScrollableLink>
+              </LinkContainer> 
               <LinkContainer>
                 <ScrollableLink href='#contact'>
                   <StyledSectionAnchor className="section-anchor" id="contact">CONTACT</StyledSectionAnchor>

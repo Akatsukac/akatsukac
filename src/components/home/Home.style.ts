@@ -4,10 +4,7 @@ import styled from 'styled-components';
 export const BackgroundImageStyles = {
   'width': '100%',
   'minHeight': '100vh',
-  'backgroundPosition': 'center',
-  'backgroundRepeat': 'no-repeat',
-  'backgroundSize': '100% 100%',
-  'position': 'relative'
+  'backgroundSize': '100% 100%'
 };
 
 export const StyledHeader = styled.h1`
@@ -17,8 +14,8 @@ export const StyledHeader = styled.h1`
 `;
 
 export const StyledSubheader = styled.h2`
-  font-size: ${constants.typography.fontSize.md};
-  font-weight: ${constants.typography.normal};
+  font-size: calc(${constants.typography.fontSize.md} + 4px);
+  font-weight: ${constants.typography.fontWeight.normal};
   color: ${constants.colors.black};
 `;
 
