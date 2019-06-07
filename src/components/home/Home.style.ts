@@ -1,11 +1,17 @@
 import constants from '../../styling/constants';
 import styled from 'styled-components';
 
-export const BackgroundImageStyles = {
+export const DesktopBackgroundStyles = {
   'width': '100%',
   'minHeight': '100vh',
   'backgroundSize': '100% 100%'
 };
+
+export const MobileBackgroundStyles = {
+  'width': '100%',
+  'minHeight': '100vh',
+  'backgroundSize': 'cover'
+}
 
 export const StyledHeader = styled.h1`
   font-size: ${constants.typography.fontSize.xl};

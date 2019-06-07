@@ -1,22 +1,25 @@
 import * as React from 'react';
+import constants from '../../styling/constants';
 import BackgroundImage from 'gatsby-background-image';
+import ScrollableSection from 'react-update-url-on-scroll';
 import { graphql, StaticQuery } from 'gatsby';
 import { 
-  BackgroundImageStyles,
+  DesktopBackgroundStyles,
+  MobileBackgroundStyles,
   StyledHeader,
   StyledSubheader,
   WelcomeContainer
 } from './Home.style';
-import ScrollableSection from 'react-update-url-on-scroll';
 
 export default class Home extends React.Component {
+
   render() {
     return (
       <StaticQuery 
       query={HOME_QUERY}
       render={(data) => (
         <ScrollableSection hash={'home'}>
-          <BackgroundImage style={BackgroundImageStyles} fluid={data.background.childImageSharp.fluid}>
+          <BackgroundImage style={DesktopBackgroundStyles} fluid={data.background.childImageSharp.fluid}> 
             <WelcomeContainer>
               <StyledHeader>CHRISTOPHER&nbsp;AKATSUKA</StyledHeader>
               <StyledSubheader>Full&nbsp;Stack&nbsp;Developer</StyledSubheader>
