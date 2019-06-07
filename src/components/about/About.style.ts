@@ -60,8 +60,4 @@ export const StyledParagraph = styled.p`
   ${media(constants.breakpoints.tablet)`
     font-size: calc()
   `};
-
-  ${media(constants.breakpoints.mobile)`
-    font-size: calc()
-  `};
 `;

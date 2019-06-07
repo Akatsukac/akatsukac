@@ -1,11 +1,8 @@
 import * as React from 'react';
-import constants from '../../styling/constants';
-import BackgroundImage from 'gatsby-background-image';
 import ScrollableSection from 'react-update-url-on-scroll';
 import { graphql, StaticQuery } from 'gatsby';
 import { 
-  DesktopBackgroundStyles,
-  MobileBackgroundStyles,
+  StyledBackgroundImage,
   StyledHeader,
   StyledSubheader,
   WelcomeContainer
@@ -19,12 +16,12 @@ export default class Home extends React.Component {
       query={HOME_QUERY}
       render={(data) => (
         <ScrollableSection hash={'home'}>
-          <BackgroundImage style={DesktopBackgroundStyles} fluid={data.background.childImageSharp.fluid}> 
+          <StyledBackgroundImage fluid={data.background.childImageSharp.fluid}> 
             <WelcomeContainer>
-              <StyledHeader>CHRISTOPHER&nbsp;AKATSUKA</StyledHeader>
-              <StyledSubheader>Full&nbsp;Stack&nbsp;Developer</StyledSubheader>
+              <StyledHeader>CHRISTOPHER AKATSUKA</StyledHeader>
+              <StyledSubheader>Full Stack Developer</StyledSubheader>
             </WelcomeContainer>
-          </BackgroundImage>
+          </StyledBackgroundImage>
         </ScrollableSection>
       )}></StaticQuery>
     );
