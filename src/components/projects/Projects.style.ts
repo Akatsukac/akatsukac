@@ -1,5 +1,6 @@
 import constants from '../../styling/constants';
 import styled from 'styled-components';
+import { media } from '../../styling/core';
 
 export const ProjectsContainer = styled.div`
   .project:nth-child(even) {
@@ -13,8 +14,16 @@ export const ProjectsContainer = styled.div`
 `;
 
 export const StyledHeader = styled.h2`
-  font-size: ${constants.typography.fontSize.lg};
+  font-size: calc(${constants.typography.fontSize.md} - 6px);
   font-weight: ${constants.typography.fontWeight.bold};
+
+  ${media(constants.breakpoints.tablet)`
+    font-size: ${constants.typography.fontSize.md};
+  `};
+
+  ${media(constants.breakpoints.desktop)`
+    font-size: ${constants.typography.fontSize.lg};
+  `};
 `;
 
 export const StyledParagraph = styled.p`

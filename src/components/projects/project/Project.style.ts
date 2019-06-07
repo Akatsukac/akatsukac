@@ -1,6 +1,7 @@
 import constants from '../../../styling/constants';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import { media } from '../../../styling/core';
 
 export const ButtonContainer = styled.button`
   position: absolute;
@@ -42,10 +43,18 @@ export const CollapsibleContainer = styled.div`
 `;
 
 export const ProjectContainer = styled.div`
-  padding: 50px 250px 70px;
+  padding: 15px;
   display: flex;
   min-height: 400px;
   overflow: hidden;
+
+  ${media(constants.breakpoints.tablet)`
+    padding: 20px 150px;
+  `};
+
+  ${media(constants.breakpoints.desktop)`
+    padding: 50px 250px 70px;
+  `};
 `;
 
 export const StyledSpan = styled.span`

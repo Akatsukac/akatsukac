@@ -6,12 +6,12 @@ import { media } from '../../styling/core';
 export const StyledBackgroundImage = styled(BackgroundImage)`
   min-height: 100vh;
 
-  :before{
+  :before, :after {
     background-size: cover !important;
   }
 
-  ${media(constants.breakpoints.tablet)`
-    :before{
+  ${media(constants.breakpoints.desktop)`
+    :before, :after {
       background-size: 100% 100% !important;
     }
   `};
