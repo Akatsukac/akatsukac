@@ -27,7 +27,7 @@ export const StyledHeader = styled.h2`
 `;
 
 export const StyledParagraph = styled.p`
-  font-size: calc(${constants.typography.fontSize.md} - 4px);
+  font-size: calc(${constants.typography.fontSize.sm} - 2px);
   font-weight: ${constants.typography.fontWeight.normal};
 
   &.collapsed {
@@ -37,10 +37,14 @@ export const StyledParagraph = styled.p`
   &.visible {
     display: block;
   }
+
+  ${media(constants.breakpoints.desktop)`
+    font-size: calc(${constants.typography.fontSize.md} - 4px);
+  `};  
 `;
 
 export const StyledSubheader = styled.h4`
-  font-size: ${constants.typography.fontSize.md};
+  font-size: ${constants.typography.fontSize.sm};
   font-weight: ${constants.typography.fontWeight.bold};
 
   &.collapsed {
@@ -50,4 +54,8 @@ export const StyledSubheader = styled.h4`
   &.visible {
     display: block;
   }
+
+  ${media(constants.breakpoints.desktop)`
+    font-size: ${constants.typography.fontSize.md};
+  `};
 `;

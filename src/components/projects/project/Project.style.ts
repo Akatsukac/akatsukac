@@ -45,7 +45,6 @@ export const CollapsibleContainer = styled.div`
 export const ProjectContainer = styled.div`
   padding: 15px;
   display: flex;
-  min-height: 400px;
   overflow: hidden;
 
   ${media(constants.breakpoints.tablet)`
@@ -53,6 +52,7 @@ export const ProjectContainer = styled.div`
   `};
 
   ${media(constants.breakpoints.desktop)`
+    min-height: 400px;
     padding: 50px 250px 70px;
   `};
 `;
@@ -66,6 +66,14 @@ export const StyledSpan = styled.span`
     border-bottom: 4px solid ${constants.colors.orange};
     padding: 12px 0;
   }
+
+  ${media(constants.breakpoints.tablet)`
+    font-size: calc(${constants.typography.fontSize.sm} + 6px);
+  `};
+
+  ${media(constants.breakpoints.desktop)`
+    font-size: ${constants.typography.fontSize.md};
+  `};
 `;
 
 export const ToggleIcon = styled(Img)`
