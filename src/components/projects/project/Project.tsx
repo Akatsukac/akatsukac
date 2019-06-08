@@ -25,7 +25,7 @@ export default class Project extends React.Component {
               <StyledSpan className="read-more">READ&nbsp;MORE</StyledSpan>
               <ToggleIcon fluid={data.expand.childImageSharp.fluid} alt='expand'/>
             </ButtonContainer>
-            <ButtonContainer className="inactive" onClick={(e:React.MouseEvent) => triggerEvent(e)}>
+            <ButtonContainer className="inactive container-less" onClick={(e:React.MouseEvent) => triggerEvent(e)}>
               <StyledSpan className="read-less">READ&nbsp;LESS</StyledSpan>
               <ToggleIcon className="read-less" fluid={data.collapse.childImageSharp.fluid} alt='collapse'/>
             </ButtonContainer>
