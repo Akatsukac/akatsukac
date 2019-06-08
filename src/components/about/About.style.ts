@@ -4,16 +4,22 @@ import styled from 'styled-components';
 import { media } from '../../styling/core';
 
 export const AboutContainer = styled.div`
-  padding: 105px 0;
+  padding: 30px 15px;
   text-align: center;
   min-height: calc(100vh - ${constants.header.height});
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
 
   // ie compatibility
   @media all and (-ms-high-contrast: none) {
     justify-content: space-around;
   }
+  ${media(constants.breakpoints.tablet)`
+    flex-direction: row;
+    padding: 105px 0;
+  `};
+
 `;
 
 export const ParagraphsContainer = styled.div`
@@ -21,6 +27,8 @@ export const ParagraphsContainer = styled.div`
 `;
 
 export const Portrait = styled(Img)`
+  min-height: 200px;
+  min-width: 200px;
   height: 25%;
   width: 25%;
 `;
@@ -53,11 +61,13 @@ export const StyledParagraph = styled.p`
   font-weight: ${constants.typography.fontWeight.normal};
   color: ${constants.colors.black};
 
+  ${media(constants.breakpoints.tablet)`
+    font-size: calc()
+  `};
+
   ${media(constants.breakpoints.desktop)`
     font-size: calc();
   `};
 
-  ${media(constants.breakpoints.tablet)`
-    font-size: calc()
-  `};
+ 
 `;
