@@ -1,27 +1,34 @@
 import * as React from 'react';
-import BackgroundImage from 'gatsby-background-image';
+import ScrollableSection from 'react-update-url-on-scroll';
 import { graphql, StaticQuery } from 'gatsby';
 import { 
-  BackgroundImageStyles,
+  ResumeButton,
+  StyledAnchor,
+  StyledBackgroundImage,
   StyledHeader,
   StyledSubheader,
   WelcomeContainer
 } from './Home.style';
-import ScrollableSection from 'react-update-url-on-scroll';
 
 export default class Home extends React.Component {
+
   render() {
     return (
       <StaticQuery 
       query={HOME_QUERY}
       render={(data) => (
         <ScrollableSection hash={'home'}>
-          <BackgroundImage style={BackgroundImageStyles} fluid={data.background.childImageSharp.fluid}>
+          <StyledBackgroundImage fluid={data.background.childImageSharp.fluid}> 
             <WelcomeContainer>
-              <StyledHeader>CHRISTOPHER&nbsp;AKATSUKA</StyledHeader>
-              <StyledSubheader>Full&nbsp;Stack&nbsp;Developer</StyledSubheader>
+              <StyledHeader>CHRISTOPHER AKATSUKA</StyledHeader>
+              <StyledSubheader>Full Stack Developer</StyledSubheader>
+              <StyledAnchor href="https://github.com/Akatsukac/akatsukac/raw/master/src/assets/docs/Final-Akatsuka-Resume.pdf" download>
+                <ResumeButton variant="outlined" size="large">
+                  DOWNLOAD RESUME
+                </ResumeButton>
+            </StyledAnchor>
             </WelcomeContainer>
-          </BackgroundImage>
+          </StyledBackgroundImage>
         </ScrollableSection>
       )}></StaticQuery>
     );
