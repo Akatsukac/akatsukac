@@ -1,15 +1,20 @@
 import BackgroundImage from 'gatsby-background-image';
+import Button from '@material-ui/core/Button';
 import constants from '../../styling/constants';
 import styled from 'styled-components';
 import { media } from '../../styling/core';
 
-export const ResumeButtonStyles = {
-  'minWidth': '300px',
-  'minHeight': '70px',
-  'fontSize': `calc(${constants.typography.fontSize.sm} + 4px)`,
-  'border': `7px solid ${constants.colors.black}`,
-  'borderRadius': '0'
-};
+export const ResumeButton = styled(Button)`
+  border: 3px solid ${constants.colors.black} !important;
+  border-radius: 0 !important;
+
+  ${media(constants.breakpoints.tablet)`
+    min-width: 300px !important;
+    min-height: 70px;
+    font-size: calc(${constants.typography.fontSize.sm} + 4px) !important;
+    border: 7px solid ${constants.colors.black} !important;
+  `};
+`;
 
 export const StyledAnchor = styled.a`
   text-decoration: none;

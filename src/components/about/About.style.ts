@@ -6,7 +6,6 @@ import { media } from '../../styling/core';
 export const AboutContainer = styled.div`
   padding: 30px 15px;
   text-align: center;
-  min-height: calc(100vh - ${constants.header.height});
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -15,7 +14,13 @@ export const AboutContainer = styled.div`
   @media all and (-ms-high-contrast: none) {
     justify-content: space-around;
   }
+
   ${media(constants.breakpoints.tablet)`
+    min-height: calc(100vh - ${constants.header.height});
+    padding: 80px 150px;
+  `};
+
+  ${media(constants.breakpoints.desktop)`
     flex-direction: row;
     padding: 105px 0;
   `};
@@ -24,7 +29,8 @@ export const AboutContainer = styled.div`
 
 export const ParagraphsContainer = styled.div`
   width: 100%;
-  ${media(constants.breakpoints.tablet)`
+
+  ${media(constants.breakpoints.desktop)`
     width: 35%;
   `};
 `;
@@ -32,7 +38,8 @@ export const ParagraphsContainer = styled.div`
 export const Portrait = styled(Img)`
   width: 100%;
   height: 100%;
-  ${media(constants.breakpoints.tablet)`
+
+  ${media(constants.breakpoints.desktop)`
     min-height: 200px;
     min-width: 200px;
     height: 25%;
@@ -41,17 +48,16 @@ export const Portrait = styled(Img)`
 `;
 
 export const StyledHeader = styled.h2`
-
   font-size: calc(${constants.typography.fontSize.md} - 6px);
   font-weight: ${constants.typography.fontWeight.bold};
   text-align: left;
 
   ${media(constants.breakpoints.tablet)`
-    margin: 0;
     font-size: ${constants.typography.fontSize.md};
   `};
 
   ${media(constants.breakpoints.desktop)`
+    margin: 0;
     font-size: ${constants.typography.fontSize.lg};
   `};
 `;
