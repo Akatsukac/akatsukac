@@ -15,6 +15,7 @@ export const HeaderContainer = styled(Toolbar)`
   justify-content: space-between;
   color: ${constants.colors.white};
   padding: 30px !important;
+  min-height: 115px !important;
 `;
 
 export const LinkContainer = styled.div`
