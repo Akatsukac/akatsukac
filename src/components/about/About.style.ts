@@ -66,6 +66,7 @@ export const StyledParagraph = styled.p`
   &:first-child, &:last-child {
       margin: 0;
   }
+  
   font-size: calc(${constants.typography.fontSize.sm} - 2px);
   text-align: left;
   font-weight: ${constants.typography.fontWeight.normal};
