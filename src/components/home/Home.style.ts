@@ -3,6 +3,18 @@ import constants from '../../styling/constants';
 import styled from 'styled-components';
 import { media } from '../../styling/core';
 
+export const ResumeButtonStyles = {
+  'minWidth': '300px',
+  'minHeight': '70px',
+  'fontSize': `calc(${constants.typography.fontSize.sm} + 4px)`,
+  'border': `7px solid ${constants.colors.black}`,
+  'borderRadius': '0'
+};
+
+export const StyledAnchor = styled.a`
+  text-decoration: none;
+`;
+
 export const StyledBackgroundImage = styled(BackgroundImage)`
   min-height: 100vh;
 

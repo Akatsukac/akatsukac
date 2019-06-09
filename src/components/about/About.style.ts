@@ -23,51 +23,53 @@ export const AboutContainer = styled.div`
 `;
 
 export const ParagraphsContainer = styled.div`
-  width: 35%;
+  width: 100%;
+  ${media(constants.breakpoints.tablet)`
+    width: 35%;
+  `};
 `;
 
 export const Portrait = styled(Img)`
-  min-height: 200px;
-  min-width: 200px;
-  height: 25%;
-  width: 25%;
-`;
-
-export const ResumeButtonStyles = {
-  'minWidth': '300px',
-  'minHeight': '70px',
-  'fontSize': `calc(${constants.typography.fontSize.sm} + 4px)`,
-  'border': `7px solid ${constants.colors.black}`,
-  'borderRadius': '0'
-};
-
-export const StyledAnchor = styled.a`
-  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  ${media(constants.breakpoints.tablet)`
+    min-height: 200px;
+    min-width: 200px;
+    height: 25%;
+    width: 25%;
+  `};
 `;
 
 export const StyledHeader = styled.h2`
+
+  font-size: calc(${constants.typography.fontSize.md} - 6px);
   font-weight: ${constants.typography.fontWeight.bold};
-  font-size: ${constants.typography.fontSize.lg};
   text-align: left;
-  margin: 0;
+
+  ${media(constants.breakpoints.tablet)`
+    margin: 0;
+    font-size: ${constants.typography.fontSize.md};
+  `};
+
+  ${media(constants.breakpoints.desktop)`
+    font-size: ${constants.typography.fontSize.lg};
+  `};
 `;
 
 export const StyledParagraph = styled.p`
   &:first-child, &:last-child {
       margin: 0;
   }
-  font-size: calc(${constants.typography.fontSize.md} - 4px);
+  font-size: calc(${constants.typography.fontSize.sm} - 2px);
   text-align: left;
   font-weight: ${constants.typography.fontWeight.normal};
   color: ${constants.colors.black};
 
   ${media(constants.breakpoints.tablet)`
-    font-size: calc()
-  `};
+    font-size: calc(${constants.typography.fontSize.sm} - 2px);
+  `}; 
 
   ${media(constants.breakpoints.desktop)`
-    font-size: calc();
+    font-size: calc(${constants.typography.fontSize.md} - 4px);
   `};
-
- 
 `;
