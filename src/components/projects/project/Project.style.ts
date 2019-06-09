@@ -130,14 +130,8 @@ export const ToggleIcon = styled(Img)`
     margin: 5px 15px 15px 15px;
 
     &.read-less {
-      border: 4px solid ${constants.colors.orange};
       min-height: 45px;
       min-width: 45px;
-      margin 2px 25px;
-  
-      img {
-        padding: 3px;
-      }
     }
   `};
 
@@ -146,16 +140,9 @@ export const ToggleIcon = styled(Img)`
     min-width: 45px;
     margin: 5px 20px 20px 20px; 
 
-
     &.read-less {
-      border: 4px solid ${constants.colors.orange};
       min-height: 63px;
       min-width: 63px;
-      margin 2px 25px;
-  
-      img {
-        padding: 4px;
-      }
     }
   `};
 `;

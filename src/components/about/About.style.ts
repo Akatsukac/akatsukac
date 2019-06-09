@@ -24,7 +24,6 @@ export const AboutContainer = styled.div`
     flex-direction: row;
     padding: 105px 0;
   `};
-
 `;
 
 export const ParagraphsContainer = styled.div`
@@ -66,15 +65,11 @@ export const StyledParagraph = styled.p`
   &:first-child, &:last-child {
       margin: 0;
   }
-  
+
   font-size: calc(${constants.typography.fontSize.sm} - 2px);
   text-align: left;
   font-weight: ${constants.typography.fontWeight.normal};
   color: ${constants.colors.black};
-
-  ${media(constants.breakpoints.tablet)`
-    font-size: calc(${constants.typography.fontSize.sm} - 2px);
-  `}; 
 
   ${media(constants.breakpoints.desktop)`
     font-size: calc(${constants.typography.fontSize.md} - 4px);

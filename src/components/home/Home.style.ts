@@ -47,7 +47,6 @@ export const StyledHeader = styled.h1`
 
   ${media(constants.breakpoints.desktop)`
     font-size: ${constants.typography.fontSize.xl};
-    white-space: nowrap;
   `};
 `;
 
@@ -64,7 +63,6 @@ export const StyledSubheader = styled.h2`
 
   ${media(constants.breakpoints.desktop)`
     font-size: calc(${constants.typography.fontSize.md} + 4px);
-    white-space: nowrap;
   `};
 `;
 
