@@ -20,8 +20,8 @@ export default class Home extends React.Component {
         <ScrollableSection hash={'home'}>
           <StyledBackgroundImage fluid={data.background.childImageSharp.fluid}> 
             <WelcomeContainer>
-              <StyledHeader>CHRISTOPHER AKATSUKA</StyledHeader>
               <StyledSubheader>Full Stack Developer</StyledSubheader>
+              <StyledHeader>CHRISTOPHER AKATSUKA</StyledHeader>
               <StyledAnchor href="https://github.com/Akatsukac/akatsukac/raw/master/src/assets/docs/Final-Akatsuka-Resume.pdf" download>
                 <ResumeButton variant="outlined" size="large">
                   DOWNLOAD RESUME

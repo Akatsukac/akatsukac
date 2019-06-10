@@ -3,6 +3,20 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 import { media } from '../../styling/core';
 
+// When you hover the icon, make the associated header underlined
+
+export const ColumnContainer = styled.div`
+  h4 {
+    border-bottom: 3px solid ${constants.colors.white};
+  }
+  
+  :hover {
+    h4 {
+      border-bottom: 3px solid ${constants.colors.orange};
+    }
+  }
+`;
+
 export const ColumnsContainer = styled.div`
   display: inline-flex;
   width: 100%;
@@ -31,12 +45,17 @@ export const ContactIcon = styled(Img)`
   `};
 `;
 
+export const StyledAnchor = styled.a`
+  text-decoration: none;
+`
+
 export const StyledColumnHeader = styled.h4`
   font-size: ${constants.typography.fontSize.sm};
   font-weight: ${constants.typography.fontWeight.bold};
   color: ${constants.colors.black};
 
   ${media(constants.breakpoints.desktop)`
+    line-height: 50px;
     font-size: ${constants.typography.fontSize.md};
   `};
 `;

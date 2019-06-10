@@ -5,14 +5,15 @@ import styled from 'styled-components';
 import { media } from '../../styling/core';
 
 export const ResumeButton = styled(Button)`
-  border: 3px solid ${constants.colors.black} !important;
+  border: 3px solid ${constants.colors.white} !important;
+  color: ${constants.colors.white} !important;
   border-radius: 0 !important;
 
   ${media(constants.breakpoints.tablet)`
     min-width: 300px !important;
     min-height: 70px;
     font-size: calc(${constants.typography.fontSize.sm} + 4px) !important;
-    border: 7px solid ${constants.colors.black} !important;
+    border: 3px solid ${constants.colors.white} !important;
   `};
 `;
 
@@ -55,10 +56,12 @@ export const StyledSubheader = styled.h2`
   font-weight: ${constants.typography.fontWeight.normal};
   color: ${constants.colors.black};
   white-space: normal;
+  margin: 0;
 
   ${media(constants.breakpoints.tablet)`
     font-size: calc(${constants.typography.fontSize.md});
     white-space: nowrap;
+    line-height: 0;
   `};
 
   ${media(constants.breakpoints.desktop)`

@@ -9,6 +9,7 @@ export const AboutContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+  border-bottom: 3px solid ${constants.colors.black};
 
   // ie compatibility
   @media all and (-ms-high-contrast: none) {

@@ -2,9 +2,11 @@ import * as React from 'react';
 import ScrollableSection from 'react-update-url-on-scroll';
 import { graphql, StaticQuery } from 'gatsby';
 import { 
+  ColumnContainer,
   ColumnsContainer,
   ContactContainer,
   ContactIcon,
+  StyledAnchor,
   StyledColumnHeader,
   StyledHeader
 } from './Contact.style';
@@ -19,24 +21,24 @@ export default class About extends React.Component {
           <ContactContainer>
             <StyledHeader>Get In Touch</StyledHeader>
             <ColumnsContainer>
-              <div>
-                <a href='mailto:akatsukac@gmail.com' rel="noopener nofollower">
+              <ColumnContainer>
+                <StyledAnchor href='mailto:akatsukac@gmail.com' rel="noopener nofollower">
                   <ContactIcon fluid={data.email.childImageSharp.fluid} alt='email icon'/>
-                </a>
-                <StyledColumnHeader>Inquire</StyledColumnHeader>
-              </div>
-              <div>
-                <a href='https://www.linkedin.com/in/akatsukac/' target="__blank" rel="noopener nofollower">
+                  <StyledColumnHeader>Inquire</StyledColumnHeader>
+                </StyledAnchor>
+              </ColumnContainer>
+              <ColumnContainer>
+                <StyledAnchor href='https://www.linkedin.com/in/akatsukac/' target="__blank" rel="noopener nofollower">
                   <ContactIcon fluid={data.linkedin.childImageSharp.fluid} alt='linkedin icon'/>
-                </a>
-                <StyledColumnHeader>Connect</StyledColumnHeader>
-              </div>
-              <div>
-                <a href='https://github.com/Akatsukac/akatsukac' target="__blank" rel="noopener nofollower">
+                  <StyledColumnHeader>Connect</StyledColumnHeader>
+                </StyledAnchor>
+              </ColumnContainer>
+              <ColumnContainer>
+                <StyledAnchor href='https://github.com/Akatsukac/akatsukac' target="__blank" rel="noopener nofollower">
                   <ContactIcon fluid={data.github.childImageSharp.fluid} alt='github icon'/>
-                </a>
-                <StyledColumnHeader>Explore</StyledColumnHeader>
-              </div>
+                  <StyledColumnHeader>Explore</StyledColumnHeader>
+                </StyledAnchor>
+              </ColumnContainer>
             </ColumnsContainer>
           </ContactContainer>
         </ScrollableSection>
