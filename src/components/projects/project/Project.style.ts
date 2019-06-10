@@ -40,6 +40,17 @@ export const ButtonContainer = styled.button`
       margin: 26px -10px;
     }
 
+    // ie compatibility
+    @media all and (-ms-high-contrast: none) {
+      position: relative;
+      transform-origin: 55% 100%;
+      transform: rotate(-90deg) translateX(-7%);
+
+      &.container-less { 
+        margin: 40px -25px;
+      }
+    }
+
   `};
 
   ${media(constants.breakpoints.desktop)`
@@ -50,8 +61,17 @@ export const ButtonContainer = styled.button`
     &.container-less {
       margin: 32px 0;
     }
-  `};
 
+    // ie compatibility
+    @media all and (-ms-high-contrast: none) {
+      transform-origin: 55% 100%;
+      transform: rotate(-90deg) translateX(-18%);
+
+      &.container-less { 
+        margin: 40px -20px;
+      }
+    }
+  `};
 `;
 
 export const ChildrenContainer = styled.div`
@@ -93,6 +113,7 @@ export const StyledSpan = styled.span`
   ${media(constants.breakpoints.tablet)`
     padding: 13px 0;
     font-size: calc(${constants.typography.fontSize.sm} + 2px);
+    
     &.read-less {
       padding: 10px 0;
     }
@@ -101,6 +122,7 @@ export const StyledSpan = styled.span`
   ${media(constants.breakpoints.desktop)`
     padding: 10px 0;
     font-size: ${constants.typography.fontSize.md};
+
     &.read-less {
       padding: 12px 0;
     }
