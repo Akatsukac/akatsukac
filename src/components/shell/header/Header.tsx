@@ -45,13 +45,11 @@ export default class Header extends React.Component<{}, {anchorEl: HTMLElement|n
       render={(data) => (
         <AppBar position="fixed" style={AppBarStylings}>
           <HeaderContainer>
-            <ScrollableLink href='#home'>
-              <StyledLogoAnchor>
-                <LogoIcon fluid={data.logo.childImageSharp.fluid} alt='akatsukac logo'/>
-              </StyledLogoAnchor>
-            </ScrollableLink>
-            <LinksContainer>
-            <LinkContainer>
+            <StyledLogoAnchor href='/#home'>
+              <LogoIcon fluid={data.logo.childImageSharp.fluid} alt='akatsukac logo'/>
+            </StyledLogoAnchor>
+            <LinksContainer className="link-section">
+              <LinkContainer>
                 <ScrollableLink href='#home'>
                   <StyledSectionAnchor className="section-anchor selected" id="home">HOME</StyledSectionAnchor>
                 </ScrollableLink>
