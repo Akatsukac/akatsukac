@@ -51,7 +51,7 @@ export const ButtonContainer = styled.button`
     position: relative !important;
   }
 
-  @media all and (-ms-high-contrast: none) and min-width: ${constants.breakpoints.tablet}px {
+  @media all and (-ms-high-contrast: none) and (min-width: ${constants.breakpoints.tablet}px) {
     transform-origin: 55% 100%;
     transform: rotate(-90deg) translateX(-7%);
 
@@ -60,7 +60,7 @@ export const ButtonContainer = styled.button`
     }
   }
 
-  @media all and (-ms-high-contrast: none) and min-width: ${constants.breakpoints.desktop}px {
+  @media all and (-ms-high-contrast: none) and (min-width: ${constants.breakpoints.desktop}px) {
     transform-origin: 55% 100%;
     transform: rotate(-90deg) translateX(-18%);
 
