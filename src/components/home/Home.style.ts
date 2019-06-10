@@ -8,7 +8,7 @@ export const ResumeButton = styled(Button)`
   border: 3px solid ${constants.colors.white} !important;
   color: ${constants.colors.white} !important;
   border-radius: 0 !important;
-  display: inline-block;
+  display: inline-block !important;
 
   ${media(constants.breakpoints.tablet)`
     min-width: 300px !important;
