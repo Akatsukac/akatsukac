@@ -3,7 +3,6 @@ import { FunctionComponent } from "react";
 import Shell from "../components/shell/Shell";
 import SEO from "../utilities/seo";
 
-
 const NotFoundPage: FunctionComponent = () => (
   <Shell>
     <SEO title="404: Not found" />

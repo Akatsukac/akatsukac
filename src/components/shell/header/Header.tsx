@@ -107,20 +107,20 @@ export default class Header extends React.Component<{}, {anchorEl: HTMLElement|n
   }
 
 const HEADER_QUERY = graphql`
-    query GetHeaderData {
-      logo: file(relativePath: {eq: "images/logo.png"}) {
-        childImageSharp {
-          fluid(maxHeight: 300) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-      hamburger: file(relativePath: {eq: "images/icons/hamburger_icon.png"}) {
-        childImageSharp {
-          fluid(maxHeight: 48) {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
+  query GetHeaderData {
+    logo: file(relativePath: {eq: "images/logo.png"}) {
+      childImageSharp {
+        fluid(maxHeight: 300) {
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
+    hamburger: file(relativePath: {eq: "images/icons/hamburger_icon.png"}) {
+      childImageSharp {
+        fluid(maxHeight: 48) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
 `;

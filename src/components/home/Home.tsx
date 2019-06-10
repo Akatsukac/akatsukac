@@ -11,7 +11,6 @@ import {
 } from './Home.style';
 
 export default class Home extends React.Component {
-
   render() {
     return (
       <StaticQuery 
@@ -36,13 +35,13 @@ export default class Home extends React.Component {
 }
 
 const HOME_QUERY = graphql`
-    query GetBackgroundImage {
-        background: file(relativePath: {eq: "images/background.jpg"}) {
-            childImageSharp {
-                fluid(maxWidth: 4160) {
-                    ...GatsbyImageSharpFluid_withWebp
-                }
-            }
+  query GetBackgroundImage {
+    background: file(relativePath: {eq: "images/background.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
         }
+      }
     }
+  }
 `;

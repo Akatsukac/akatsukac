@@ -18,5 +18,6 @@ Use graphql-code-generator to generate TypeScript types for GraphQL queries:
 `yarn gql-gen --schema ./schema.json --template graphql-codegen-typescript-template ``--out ./src/typings/graphql.d.ts "./src/**/*.ts*"`
 
 ## Notes
-* Supports major browsers
-* Partial support on IE-11
+* Supports major browsers (e.g. Chrome, Edge)
+* Partial support on IE-11, Safari
+* Tablet and mobile ready

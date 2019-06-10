@@ -37,20 +37,20 @@ export default class Project extends React.Component {
 }
 
 const PROJECT_QUERY = graphql`
-    query GetProjectData {
-      expand: file(relativePath: {eq: "images/icons/expand_icon.png"}) {
-        childImageSharp {
-          fluid(maxHeight: 300) {
-              ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-      collapse: file(relativePath: {eq: "images/icons/collapse_icon.png"}) {
-        childImageSharp {
-          fluid(maxHeight: 300) {
-              ...GatsbyImageSharpFluid_tracedSVG
-          }
+  query GetProjectData {
+    expand: file(relativePath: {eq: "images/icons/expand_icon.png"}) {
+      childImageSharp {
+        fluid(maxHeight: 300) {
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
+    collapse: file(relativePath: {eq: "images/icons/collapse_icon.png"}) {
+      childImageSharp {
+        fluid(maxHeight: 300) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+  }
 `;
