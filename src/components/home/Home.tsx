@@ -11,7 +11,6 @@ import {
 } from './Home.style';
 
 export default class Home extends React.Component {
-
   render() {
     return (
       <StaticQuery 
@@ -20,8 +19,8 @@ export default class Home extends React.Component {
         <ScrollableSection hash={'home'}>
           <StyledBackgroundImage fluid={data.background.childImageSharp.fluid}> 
             <WelcomeContainer>
-              <StyledHeader>CHRISTOPHER AKATSUKA</StyledHeader>
               <StyledSubheader>Full Stack Developer</StyledSubheader>
+              <StyledHeader>CHRISTOPHER AKATSUKA</StyledHeader>
               <StyledAnchor href="https://github.com/Akatsukac/akatsukac/raw/master/src/assets/docs/Final-Akatsuka-Resume.pdf" download>
                 <ResumeButton variant="outlined" size="large">
                   DOWNLOAD RESUME
@@ -36,13 +35,13 @@ export default class Home extends React.Component {
 }
 
 const HOME_QUERY = graphql`
-    query GetBackgroundImage {
-        background: file(relativePath: {eq: "images/background.jpg"}) {
-            childImageSharp {
-                fluid(maxWidth: 4160) {
-                    ...GatsbyImageSharpFluid_withWebp
-                }
-            }
+  query GetBackgroundImage {
+    background: file(relativePath: {eq: "images/background.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
         }
+      }
     }
+  }
 `;

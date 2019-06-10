@@ -20,7 +20,7 @@ export default class About extends React.Component {
           <Portrait fluid={data.about.childImageSharp.fluid} alt='about'/>
           <ParagraphsContainer>
             <StyledHeader>
-              Aloha! Call Me Chris.
+              Aloha! I'm Chris.
             </StyledHeader>
             <StyledParagraph>                
               I grew up in Hawaii and graduated from the University of Pennsylvania 
