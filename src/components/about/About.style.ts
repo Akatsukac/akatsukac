@@ -12,7 +12,11 @@ export const AboutContainer = styled.div`
   border-bottom: 3px solid ${constants.colors.black};
 
   // ie compatibility
-  @media all and (-ms-high-contrast: none), @supports (-ms-ime-align:auto) {
+  @media all and (-ms-high-contrast: none) {
+    justify-content: space-around;
+  }
+  // edge compatibility
+  @supports (-ms-ime-align:auto) {
     justify-content: space-around;
   }
 
