@@ -50,6 +50,7 @@ export const StyledAnchor = styled.a`
 `
 
 export const StyledColumnHeader = styled.h4`
+  display: inline-block;
   font-size: ${constants.typography.fontSize.sm};
   font-weight: ${constants.typography.fontWeight.bold};
   color: ${constants.colors.black};
