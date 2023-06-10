@@ -8,7 +8,7 @@
     "babel-plugin-styled-components": "^1.10.0",
     "core-js": "^2.6.5",
     "es7-object-polyfill": "^1.0.0",
-    "gatsby": "^2.3.27",
+    "gatsby": "^4.25.7",
     "gatsby-background-image": "^0.6.1",
     "gatsby-image": "^2.0.40",
     "gatsby-plugin-extract-schema": "0.0.5",
